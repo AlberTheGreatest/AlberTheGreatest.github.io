@@ -79,6 +79,8 @@ const SERIES = [
       ["a25983_39fdbbaa1b59401393d17c9d53600f0a", "Bangla Road, Phuket"]
     ] }
 ];
+const ORDER = ["thailand", "fashion", "october", "fragments"];
+SERIES.sort((a, b) => ORDER.indexOf(a.key) - ORDER.indexOf(b.key));
 const SHOW = 6;
 const tabs = $("#tabs"), grid = $("#seriesGrid"), more = $("#seriesMore");
 let current = SERIES[0];
@@ -108,53 +110,59 @@ SERIES.forEach(s => {
 more.addEventListener("click", () => openPhotos(seriesList(current), 0));
 
 /* ==========================================================
-   AI FILM CASE STUDIES
+   MOODBOARDS (every film) · title opens the board, image plays the film
    ========================================================== */
-const CASES = {
-  bellavista: { name: "BellaVista Milano", cat: "Eyewear · AI spec campaign", n: 6,
-    desc: "“True luxury doesn't shout.” Espresso on a cliffside terrace, a vintage convertible along the coast, low sun through the windshield. Quiet Italian luxury, art-directed frame by frame.",
-    tags: ["Concept", "Look development", "Generative video", "Edit", "Typography"],
-    palette: ["#332318", "#5c4c38", "#898b7d", "#bfaa93", "#dbccb7", "#f0e5d2"] },
-  solea: { name: "Soléa", cat: "Skincare · AI spec campaign", n: 6,
-    desc: "A social-first beauty ad blending a creator-style, to-camera testimonial with sunlit macro product shots among olive trees. The language of UGC with a premium finish.",
-    tags: ["UGC format", "Generative video", "Lip-sync & captions", "Product macro", "Edit"],
-    palette: ["#4a3b24", "#7e5034", "#8a6344", "#a17d59", "#d0b28c", "#e3d6c3"] },
-  aurasync: { name: "AuraSync", cat: "Audio · AI spec campaign", n: 6,
-    desc: "“Sound that moves with you.” A day-in-the-life spot that follows one consistent character from a morning ritual to city streets to the running track.",
-    tags: ["Narrative", "Character consistency", "Generative video", "VO & captions", "Edit"],
-    palette: ["#31291f", "#4c4d3f", "#7b553f", "#807868", "#a49c8f", "#cbbfb0"] }
-};
-const CASE_ORDER = Object.keys(CASES);
 const caseEl = $("#case"), caseInner = $("#caseInner"), caseScroll = $("#caseScroll");
+const FILM_ORDER = $$(".card[data-v]").map(c => c.dataset.v).filter(v => MB[v]);
+const pad2 = n => String(n).padStart(2, "0");
 
 function openCase(key) {
-  const c = CASES[key], i = CASE_ORDER.indexOf(key);
-  const prev = CASE_ORDER[(i + CASE_ORDER.length - 1) % CASE_ORDER.length], next = CASE_ORDER[(i + 1) % CASE_ORDER.length];
-  const frames = Array.from({ length: c.n }, (_, k) =>
-    `<figure style="animation-delay:${.15 + k * .07}s"><img src="assets/img/mood/${key}-${k + 1}.jpg" alt="${c.name} moodboard frame ${k + 1}"></figure>`).join("");
-  const sw = c.palette.map((h, k) => `<span style="background:${h};animation-delay:${.5 + k * .06}s"><b>${h}</b></span>`).join("");
+  const m = MB[key]; if (!m) return;
+  const i = FILM_ORDER.indexOf(key), n = FILM_ORDER.length;
+  const prev = FILM_ORDER[(i + n - 1) % n], next = FILM_ORDER[(i + 1) % n];
+  const card = $(`.card[data-v="${key}"]`);
+  const shots = m.labels.map((l, k) => `<figure class="${k === 0 ? "lead" : ""}" style="animation-delay:${.12 + k * .07}s"><img src="assets/img/mb/${key}-${k + 1}.jpg" alt="${m.t.join(" ")}, ${l}"><b class="chip">${l}</b></figure>`).join("");
   caseInner.innerHTML = `
-    <div class="case-top">
-      <div><p class="mono">${String(i + 1).padStart(2, "0")} · ${c.cat}</p><h2>${c.name}</h2></div>
-      <div><p>${c.desc}</p><div class="case-tags">${c.tags.map(t => `<span>${t}</span>`).join("")}</div></div>
+    <div class="mb ${m.v ? "is-v" : ""}">
+      <div class="mb-side">
+        <p class="mb-kicker">Mood board <i></i> ${pad2(i + 1)}</p>
+        <h2 class="mb-title">${m.t[0]}<em>${m.t[1]}</em></h2>
+        <p class="mb-desc">${m.desc}</p>
+        <div class="mb-tags">${m.tags.map(t => `<span>${t}</span>`).join("")}</div>
+        <dl class="mb-meta">${m.meta.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
+        <button class="mb-play" data-playfilm><b></b>Play the film <small>${card ? $(".dur", card).textContent : ""}</small></button>
+      </div>
+      <div class="mb-grid">${shots}</div>
+      <div class="mb-foot">
+        <div><p class="mb-label">Palette, sampled from the film</p>
+          <div class="mb-pal">${m.pal.map(([nm, hx], k) => `<div style="animation-delay:${.4 + k * .05}s"><span style="background:${hx}"></span><b>${nm}</b><small>${hx}</small></div>`).join("")}</div></div>
+        <div><p class="mb-label">Typography</p>
+          <div class="mb-type"><span class="aa">Aa</span><span class="it">${m.phrase}</span></div>
+          <p class="mb-typenote"><b>JetBrains Mono</b> Instrument Serif · title line</p></div>
+        <div class="mb-beats-wrap"><p class="mb-label">Story beats</p>
+          <ol class="mb-beats">${m.beats.map(([t, d], k) => `<li><small>${pad2(k + 1)}</small><b>${t}</b><span>${d}</span></li>`).join("")}</ol></div>
+      </div>
     </div>
-    <div class="case-label mono"><span>Moodboard</span><span>Palette · frames</span></div>
-    <div class="mood">${frames}</div>
-    <div class="palette">${sw}</div>
-    <div class="case-label mono"><span>The film</span><span>${fmt(DUR[key])}</span></div>
-    <div class="case-video"><video src="assets/video/${key}.mp4" poster="assets/img/${key}.jpg" controls playsinline preload="metadata"></video></div>
+    <div class="mb-film" id="mbFilm"></div>
     <div class="case-nav">
-      <button data-go="${prev}"><small>← Previous</small>${CASES[prev].name}</button>
-      <button data-go="${next}" style="text-align:right"><small>Next →</small>${CASES[next].name}</button>
+      <button data-go="${prev}"><small>← Previous board</small>${MB[prev].t.join(" ")}</button>
+      <button data-go="${next}" style="text-align:right"><small>Next board →</small>${MB[next].t.join(" ")}</button>
     </div>`;
   $$("[data-go]", caseInner).forEach(b => b.addEventListener("click", () => openCase(b.dataset.go)));
-  $$(".mood figure", caseInner).forEach((f, k) => f.addEventListener("click", () =>
-    open(Array.from({ length: c.n }, (_, j) => ({ type: "img", src: `assets/img/mood/${key}-${j + 1}.jpg`, cap: `${c.name} · frame ${j + 1}` })), k)));
+  const frames = m.labels.map((l, j) => ({ type: "img", src: `assets/img/mb/${key}-${j + 1}.jpg`, cap: `${m.t.join(" ")} · ${l}` }));
+  $$(".mb-grid figure", caseInner).forEach((f, k) => f.addEventListener("click", () => open(frames, k)));
+  $("[data-playfilm]", caseInner).addEventListener("click", () => {
+    const box = $("#mbFilm");
+    if (!box.firstChild) {
+      box.innerHTML = `<video src="assets/video/${key}.mp4" poster="${card ? $("img", card).getAttribute("src") : ""}" controls playsinline autoplay></video>`;
+      box.classList.add(m.v ? "is-v" : "is-w");
+    }
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
+    $("video", box).play().catch(() => {});
+  });
   caseScroll.scrollTop = 0;
-  if (!caseEl.classList.contains("open")) {
-    caseEl.classList.add("open"); caseEl.setAttribute("aria-hidden", "false"); lockScroll(true);
-  }
-  $("#caseClose").focus();
+  if (!caseEl.classList.contains("open")) { caseEl.classList.add("open"); caseEl.setAttribute("aria-hidden", "false"); lockScroll(true); }
+  $("#caseClose").focus({ preventScroll: true });
 }
 function closeCase() {
   const v = $("video", caseInner); if (v) v.pause();
@@ -178,7 +186,7 @@ pop.addEventListener("click", e => { if (e.target === pop) closePop(); });
    ========================================================== */
 const lb = $("#lb"), stage = $("#lbStage"), cap = $("#lbCap");
 let list = [], idx = 0, lastFocus = null, locks = 0;
-function lockScroll(on) { locks = Math.max(0, locks + (on ? 1 : -1)); document.body.style.overflow = locks ? "hidden" : ""; }
+function lockScroll(on) { locks = Math.max(0, locks + (on ? 1 : -1)); document.body.style.overflow = locks ? "hidden" : ""; if (window.lenis) locks ? lenis.stop() : lenis.start(); }
 
 function render() {
   const it = list[idx];
@@ -221,22 +229,35 @@ lb.addEventListener("touchend", e => {
   if (Math.abs(dx) > 60 && list.length > 1 && list[idx].type === "img") step(dx < 0 ? 1 : -1);
 });
 
-/* Video cards: each row is its own playlist; case-study cards open the case view */
+/* Video cards: the image plays the film (each row is a playlist), the title opens the moodboard */
 const hasMouse = matchMedia("(hover:hover) and (pointer:fine)").matches;
+const asButton = (el, label, fn) => {
+  el.setAttribute("role", "button"); el.setAttribute("tabindex", "0"); el.setAttribute("aria-label", label);
+  el.addEventListener("click", fn);
+  el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fn(); } });
+};
 $$("[data-group]").forEach(g => {
   const cards = $$(".card[data-v]", g);
   const items = cards.map(c => ({ type: "video", src: `assets/video/${c.dataset.v}.mp4`, poster: $("img", c).getAttribute("src"), cap: c.dataset.t }));
   cards.forEach((c, i) => {
-    c.addEventListener("click", () => c.dataset.case ? openCase(c.dataset.case) : open(items, i));
+    const frame = $(".frame", c), meta = $(".meta", c);
+    frame.dataset.cursor = "Play";
+    asButton(frame, `Play ${c.dataset.t}`, () => open(items, i));
+    if (MB[c.dataset.v]) {
+      const h = $("h4", meta);
+      h.insertAdjacentHTML("afterend", `<span class="mb-cue mono">✱ Moodboard</span>`);
+      meta.classList.add("has-mb"); meta.dataset.cursor = "Moodboard";
+      asButton(meta, `Open the moodboard for ${c.dataset.t}`, () => openCase(c.dataset.v));
+    }
     if (hasMouse) {
       let v = null, t = null;
-      c.addEventListener("mouseenter", () => {
+      frame.addEventListener("mouseenter", () => {
         t = setTimeout(() => {
-          if (!v) { v = document.createElement("video"); v.muted = true; v.loop = true; v.playsInline = true; v.preload = "auto"; v.src = items[i].src; $(".frame", c).appendChild(v); }
+          if (!v) { v = document.createElement("video"); v.muted = true; v.loop = true; v.playsInline = true; v.preload = "auto"; v.src = items[i].src; frame.appendChild(v); }
           c.classList.add("previewing"); v.currentTime = Math.min(2, (DUR[c.dataset.v] || 4) / 4); v.play().catch(() => {});
         }, 380);
       });
-      c.addEventListener("mouseleave", () => { clearTimeout(t); c.classList.remove("previewing"); if (v) v.pause(); });
+      frame.addEventListener("mouseleave", () => { clearTimeout(t); c.classList.remove("previewing"); if (v) v.pause(); });
     }
   });
 });
@@ -282,33 +303,37 @@ if (!hasMouse) {
   $$(".bw, .tile").forEach(el => co.observe(el));
 }
 
-/* Cursor */
+/* Cursor: a small dot that eases after the mouse and swells slightly over anything clickable */
 if (hasMouse) {
-  const cur = $("#cursor"), lab = $("#cursorLabel");
+  const cur = $("#cursor");
   document.body.classList.add("has-cursor");
   let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
   addEventListener("mousemove", e => { x = e.clientX; y = e.clientY; cur.classList.add("on"); }, { passive: true });
   document.addEventListener("mouseleave", () => cur.classList.remove("on"));
-  (function loop() { cx += (x - cx) * .2; cy += (y - cy) * .2; cur.style.transform = `translate3d(${cx}px,${cy}px,0)`; requestAnimationFrame(loop); })();
-  document.addEventListener("mouseover", e => {
-    const t = e.target.closest("[data-cursor]");
-    if (t) { lab.textContent = t.dataset.cursor; cur.classList.add("big"); } else cur.classList.remove("big");
-  });
+  (function loop() { cx += (x - cx) * .22; cy += (y - cy) * .22; cur.style.transform = `translate3d(${cx}px,${cy}px,0)`; requestAnimationFrame(loop); })();
+  document.addEventListener("mouseover", e => cur.classList.toggle("hover", !!e.target.closest("[data-cursor],a,button,[role=button]")));
+}
+
+/* Smooth wheel scrolling (Lenis) · native touch scrolling on phones */
+if (window.Lenis && hasMouse && !matchMedia("(prefers-reduced-motion:reduce)").matches) {
+  window.lenis = new Lenis({ duration: 1.1, easing: t => 1 - Math.pow(1 - t, 4), smoothWheel: true });
+  (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
 }
 
 /* Scroll: progress bar, nav state, hero parallax */
 const nav = $("#nav"), bar = $("#progress"), heroMedia = $(".hero-media");
 let ticking = false;
-addEventListener("scroll", () => {
+const onScroll = () => {
   if (ticking) return; ticking = true;
   requestAnimationFrame(() => {
     const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
     bar.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
     nav.classList.toggle("scrolled", y > 40);
-    if (y < innerHeight) heroMedia.style.transform = `translate3d(0,${y * .25}px,0)`;
+    if (y < innerHeight) heroMedia.style.transform = `translate3d(0,${(y * .2).toFixed(1)}px,0)`;
     ticking = false;
   });
-}, { passive: true });
+};
+addEventListener("scroll", onScroll, { passive: true });
 
 /* Active nav link */
 const links = $$(".nav-links a");
@@ -327,14 +352,14 @@ function setMenu(on) {
 }
 menuBtn.addEventListener("click", () => setMenu(!document.body.classList.contains("menu-open")));
 
-/* Smooth anchors that land exactly even while lazy images load */
+/* Anchors: land exactly even while lazy images load */
 $$('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
   const id = a.getAttribute("href"), target = id === "#top" ? document.body : $(id);
   if (!target) return;
   e.preventDefault();
   if (document.body.classList.contains("menu-open")) setMenu(false);
   history.replaceState(null, "", id);
-  const go = () => scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + scrollY), behavior: "smooth" });
-  go(); setTimeout(go, 700);
+  const go = () => window.lenis ? lenis.scrollTo(id === "#top" ? 0 : target, { duration: 1.4 }) : scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + scrollY), behavior: "smooth" });
+  go(); setTimeout(go, 900);
 }));
 showSeries(SERIES[0]);
