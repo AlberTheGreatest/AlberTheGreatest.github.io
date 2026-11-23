@@ -35,7 +35,6 @@ const SERIES = [
     items: [
       ["a25983_84738b3003924b5eac6bd9e9a47e4b13", "Fedora, bicycle, green crate"],
       ["a25983_1c68d2abcb804ccaaf72f63d84ed50e6", "Waiting to cross Dizengoff"],
-      ["a25983_bced3fe18023432ba679a122dbfa0051", "Yellow raincoat, hailing a taxi"],
       ["a25983_a2270dbdc998418e884364ae137eeb43", "Above the Bauhaus rooftops"],
       ["a25983_8bf26ffa554a411ea4c2b6ea78c64d88", "Busker on Rothschild"],
       ["a25983_fc5b053a9da74357b730ff167abf68c6", "Chairs on a motorcycle"],

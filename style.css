@@ -137,6 +137,7 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
 .feat{grid-template-columns:repeat(2,1fr)}
 .feat .card:first-child{grid-column:1/-1}
 .feat .card:first-child .frame{aspect-ratio:21/9}
+.feat .card:first-child .frame img{object-position:50% 28%}
 .feat .card:first-child .meta h4{font-size:clamp(28px,3vw,44px)}
 
 .card{cursor:pointer;display:block;width:100%}
