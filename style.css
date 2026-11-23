@@ -501,3 +501,12 @@ body.loading .hero-title .line>span,body.loading .load{animation-play-state:paus
   .hero-meta span:first-child{display:none}
   .hero-meta{justify-content:flex-end}
 }
+/* Mobile refinements */
+@media (max-width:1000px){ .mb-pal span{aspect-ratio:2/1} }
+@media (max-width:700px){
+  .tile .cnt{display:none}
+  .feat{grid-template-columns:1fr}
+  .mb.is-v .mb-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 calc(var(--pad)*-1);padding:0 var(--pad);scroll-padding-left:var(--pad);scrollbar-width:none}
+  .mb.is-v .mb-grid::-webkit-scrollbar{display:none}
+  .mb.is-v .mb-grid figure{flex:0 0 58%;scroll-snap-align:start}
+}

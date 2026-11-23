@@ -258,7 +258,7 @@ $$("[data-group]").forEach(g => {
       let v = null, t = null;
       frame.addEventListener("mouseenter", () => {
         t = setTimeout(() => {
-          if (!v) { v = document.createElement("video"); v.muted = true; v.loop = true; v.playsInline = true; v.preload = "auto"; v.src = items[i].src; frame.appendChild(v); }
+          if (!v) { v = document.createElement("video"); v.muted = true; v.loop = true; v.playsInline = true; v.preload = "metadata"; v.src = items[i].src; frame.appendChild(v); }
           c.classList.add("previewing"); v.currentTime = Math.min(2, (DUR[c.dataset.v] || 4) / 4); v.play().catch(() => {});
         }, 380);
       });
