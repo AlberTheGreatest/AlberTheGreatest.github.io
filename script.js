@@ -8,13 +8,13 @@ const DUR = {
   bride: 35, "craft-to-love": 43, "made-by-hand": 60, "shoot-days": 60,
   mia: 13, "ring-guide": 17, natalie: 11, eleanor: 17,
   "three-points": 136, "lb-beauty": 54, "kevin-intro": 40, lidor: 151, tomorrow: 236, "two-am": 30,
-  bulgaryo: 18, retro: 52, "look-14": 52, "dark-style": 10
+  bulgaryo: 18, retro: 52, "look-14": 52, "red-suit": 11
 };
 const fmt = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 $$(".card[data-v]").forEach(c => { const d = $(".dur", c); if (d && DUR[c.dataset.v]) d.textContent = fmt(DUR[c.dataset.v]); });
 
 /* ---------- Photo series ---------- */
-const P = id => ({ thumb: `assets/photo/thumb/${id}.jpg`, full: `assets/photo/${id}.jpg` });
+const P = id => ({ thumb: `assets/photo/thumb/${id}.webp`, full: `assets/photo/${id}.webp` });
 const SERIES = [
   { key: "fashion", name: "Fashion",
     desc: "Editorial, campaign and model sessions. Movement, attitude and presence held in a single frame.",
@@ -120,7 +120,7 @@ function openCase(key) {
   const i = FILM_ORDER.indexOf(key), n = FILM_ORDER.length;
   const prev = FILM_ORDER[(i + n - 1) % n], next = FILM_ORDER[(i + 1) % n];
   const card = $(`.card[data-v="${key}"]`);
-  const shots = m.labels.map((l, k) => `<figure class="${k === 0 ? "lead" : ""}" style="animation-delay:${.12 + k * .07}s"><img src="assets/img/mb/${key}-${k + 1}.jpg" alt="${m.t.join(" ")}, ${l}"><b class="chip">${l}</b></figure>`).join("");
+  const shots = m.labels.map((l, k) => `<figure class="${k === 0 ? "lead" : ""}" style="animation-delay:${.12 + k * .07}s"><img src="assets/img/mb/${key}-${k + 1}.webp" alt="${m.t.join(" ")}, ${l}"><b class="chip">${l}</b></figure>`).join("");
   caseInner.innerHTML = `
     <div class="mb ${m.v ? "is-v" : ""}">
       <div class="mb-side">
@@ -146,9 +146,10 @@ function openCase(key) {
     <div class="case-nav">
       <button data-go="${prev}"><small>← Previous board</small>${MB[prev].t.join(" ")}</button>
       <button data-go="${next}" style="text-align:right"><small>Next board →</small>${MB[next].t.join(" ")}</button>
-    </div>`;
+    </div>
+    <p class="mb-keys">← → to move between boards · Esc to close</p>`;
   $$("[data-go]", caseInner).forEach(b => b.addEventListener("click", () => openCase(b.dataset.go)));
-  const frames = m.labels.map((l, j) => ({ type: "img", src: `assets/img/mb/${key}-${j + 1}.jpg`, cap: `${m.t.join(" ")} · ${l}` }));
+  const frames = m.labels.map((l, j) => ({ type: "img", src: `assets/img/mb/${key}-${j + 1}.webp`, cap: `${m.t.join(" ")} · ${l}` }));
   $$(".mb-grid figure", caseInner).forEach((f, k) => f.addEventListener("click", () => open(frames, k)));
   $("[data-playfilm]", caseInner).addEventListener("click", () => {
     const box = $("#mbFilm");
@@ -217,6 +218,11 @@ $("#lbNext").addEventListener("click", () => step(1));
 lb.addEventListener("click", e => { if (e.target === lb || e.target === stage) close(); });
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") { if (lb.classList.contains("open")) close(); else if (pop.classList.contains("open")) closePop(); else if (caseEl.classList.contains("open")) closeCase(); else if (document.body.classList.contains("menu-open")) setMenu(false); }
+  if (!lb.classList.contains("open") && caseEl.classList.contains("open") && !pop.classList.contains("open")) {
+    const go = $(`[data-go]:${e.key === "ArrowRight" ? "last" : "first"}-child`, caseInner);
+    if ((e.key === "ArrowRight" || e.key === "ArrowLeft") && go) go.click();
+    return;
+  }
   if (!lb.classList.contains("open")) return;
   if (e.key === "ArrowRight") step(1);
   if (e.key === "ArrowLeft") step(-1);
@@ -361,4 +367,29 @@ $$('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
   const go = () => window.lenis ? lenis.scrollTo(id === "#top" ? 0 : target, { duration: 1.4 }) : scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + scrollY), behavior: "smooth" });
   go(); setTimeout(go, 900);
 }));
+
+/* Intro curtain: counts up while the hero video gets ready, then lifts (max ~1.8 s) */
+(() => {
+  const body = document.body, count = $("#introCount"), hero = $(".hero-video");
+  if (matchMedia("(prefers-reduced-motion:reduce)").matches || sessionStorage.getItem("as-intro")) { body.classList.remove("loading"); body.classList.add("ready"); return; }
+  let n = 0, ready = false, done = false;
+  const finish = () => { if (done) return; done = true; count.textContent = "100"; setTimeout(() => { body.classList.add("ready"); body.classList.remove("loading"); try { sessionStorage.setItem("as-intro", "1"); } catch (e) {} }, 180); };
+  hero.addEventListener("canplay", () => ready = true, { once: true });
+  if (hero.readyState >= 3) ready = true;
+  const tick = () => { n = Math.min(ready ? n + 9 : n + 2, ready ? 100 : 88); count.textContent = String(n).padStart(2, "0"); if (n >= 100) finish(); else if (!done) setTimeout(tick, 40); };
+  tick(); setTimeout(finish, 1800);
+})();
+
+/* Focus trap: Tab stays inside whichever dialog is open */
+document.addEventListener("keydown", e => {
+  if (e.key !== "Tab") return;
+  const d = [lb, pop, caseEl].find(x => x.classList.contains("open"));
+  if (!d) return;
+  const f = $$('button, a[href], video[controls], [tabindex="0"]', d).filter(el => el.offsetParent !== null && !el.hidden);
+  if (!f.length) return;
+  const first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  else if (!d.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+});
 showSeries(SERIES[0]);
