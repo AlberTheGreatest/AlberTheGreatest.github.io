@@ -87,7 +87,7 @@ const CHAPTERS = [
   { name: "Jewelry", line: "Campaign and product stills for Keyzar.",
     all: [PIC(1, "Three rings on white silk"), PIC(2, "Oval ring in sunlight"), PIC(3, "Eye through the ring"), PIC(4, "Radiant hidden halo, macro"), PIC(5, "Open ring box")] },
   { name: "Fashion", line: "Silhouette, attitude and light, composed for the editorial page.",
-    all: [...byId("fashion", ["b5c8cd81"]), PIC(6, "Red dress against the sky"), { thumb: "assets/photo/thumb/fashion-blazer.webp", full: "assets/photo/fashion-blazer.webp", cap: "Tailored blazer, black and white" }, ...byId("fashion", ["d2ac6511", "91d6329a", "be6c5478", "1e6e5e6e", "d5380e6b", "42f76f7e"])] },
+    all: [...byId("fashion", ["91d6329a"]), PIC(6, "Red dress against the sky"), { thumb: "assets/photo/thumb/fashion-blazer.webp", full: "assets/photo/fashion-blazer.webp", cap: "Tailored blazer, black and white" }, ...byId("fashion", ["d2ac6511", "be6c5478", "b5c8cd81", "1e6e5e6e", "d5380e6b", "42f76f7e"])] },
   { name: "Travel", line: "Light, colour and water, collected on the road.",
     all: [...byId("thailand", ["fee258a2"]), TRV("sharm-coast", "Sinai coast"), TRV("sinai-underwater", "Underwater"),
           ...byId("thailand", ["d84afc29", "c21b4e67", "f294d45c", "301fae08", "f34fbd28", "24fd3046"]),
