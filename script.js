@@ -8,7 +8,7 @@ const DUR = {
   bride: 35, "craft-to-love": 43, "made-by-hand": 60, "shoot-days": 60,
   mia: 13, "ring-guide": 17, natalie: 11, eleanor: 17,
   "three-points": 136, "lb-beauty": 54, "kevin-intro": 40, lidor: 151, tomorrow: 236, "two-am": 30,
-  bulgaryo: 18, retro: 52, "look-14": 52, "red-suit": 11
+  "four-seasons": 18, bulgaryo: 18, retro: 52, "look-14": 52, "red-suit": 11, reel: 33, reel: 33
 };
 const fmt = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 $$(".card[data-v]").forEach(c => { const d = $(".dur", c); if (d && DUR[c.dataset.v]) d.textContent = fmt(DUR[c.dataset.v]); });
@@ -78,35 +78,40 @@ const SERIES = [
       ["a25983_39fdbbaa1b59401393d17c9d53600f0a", "Bangla Road, Phuket"]
     ] }
 ];
-const ORDER = ["thailand", "fashion", "october", "fragments"];
-SERIES.sort((a, b) => ORDER.indexOf(a.key) - ORDER.indexOf(b.key));
-const SHOW = 6;
-const tabs = $("#tabs"), grid = $("#seriesGrid"), more = $("#seriesMore");
-let current = SERIES[0];
-const seriesList = s => s.items.map(([id, c]) => ({ type: "img", src: P(id).full, cap: `${s.name} · ${c}` }));
-function showSeries(s) {
-  current = s;
-  $$("button", tabs).forEach(b => b.setAttribute("aria-selected", b.dataset.key === s.key));
-  $("#seriesDesc").textContent = s.desc;
-  $("#seriesCount").textContent = `${s.items.length} photos`;
-  grid.innerHTML = "";
-  s.items.slice(0, SHOW).forEach(([id, c], i) => {
-    const f = document.createElement("figure");
-    f.className = "fade bw"; f.style.animationDelay = `${i * .06}s`; f.dataset.cursor = "View";
-    f.innerHTML = `<img src="${P(id).thumb}" alt="${c}" loading="lazy"><figcaption class="mono">${c}</figcaption>`;
-    f.addEventListener("click", () => openPhotos(seriesList(s), i));
-    grid.appendChild(f);
-    if (window.colorObserver) window.colorObserver.observe(f);
-  });
-  more.textContent = `View all ${s.items.length} →`;
-}
-SERIES.forEach(s => {
-  const b = document.createElement("button");
-  b.textContent = s.name; b.dataset.key = s.key; b.setAttribute("role", "tab");
-  b.addEventListener("click", () => showSeries(s));
-  tabs.appendChild(b);
+/* ---------- Photography: four chapters, three frames each, full set in the viewer ---------- */
+const S = key => SERIES.find(x => x.key === key);
+const byId = (key, ids) => ids.map(id => { const it = S(key).items.find(([x]) => x.includes(id)); return { thumb: P(it[0]).thumb, full: P(it[0]).full, cap: it[1] }; });
+const PIC = (n, cap) => ({ thumb: `assets/img/p${n}.webp`, full: `assets/photo/full/p${n}.webp`, cap });
+const TRV = (k, cap) => ({ thumb: `assets/photo/travel/thumb/${k}.webp`, full: `assets/photo/travel/${k}.webp`, cap });
+const CHAPTERS = [
+  { name: "Jewelry", line: "Campaign and product stills for Keyzar.",
+    all: [PIC(1, "Three rings on white silk"), PIC(2, "Oval ring in sunlight"), PIC(3, "Eye through the ring"), PIC(4, "Radiant hidden halo, macro"), PIC(5, "Open ring box")] },
+  { name: "Fashion", line: "Silhouette, attitude and light, composed for the editorial page.",
+    all: [...byId("fashion", ["b5c8cd81"]), PIC(6, "Red dress against the sky"), { thumb: "assets/photo/thumb/fashion-blazer.webp", full: "assets/photo/fashion-blazer.webp", cap: "Tailored blazer, black and white" }, ...byId("fashion", ["d2ac6511", "91d6329a", "be6c5478", "1e6e5e6e", "d5380e6b", "42f76f7e"])] },
+  { name: "Travel", line: "Light, colour and water, collected on the road.",
+    all: [...byId("thailand", ["fee258a2"]), TRV("sharm-coast", "Sinai coast"), TRV("sinai-underwater", "Underwater"),
+          ...byId("thailand", ["d84afc29", "c21b4e67", "f294d45c", "301fae08", "f34fbd28", "24fd3046"]),
+          TRV("sharm-wake", "Boat wake, Red Sea"), TRV("salt-sunset", "Mirror shore at sunset"), TRV("sharm-yacht", "Yacht at anchor, Red Sea"), TRV("sea-toast", "A toast at sunset")] },
+  { name: "October 7", line: "Documentary photographs from Tel Aviv and the Gaza Envelope communities: the protests at home, and the forces gearing up before heading into battle.",
+    all: byId("october", ["7d5a4c2f", "987354223", "08998a1f", "f319ced8", "579e7171", "4332019f", "9263af54", "4c56c264"]) }
+];
+const chapWrap = $("#chapters");
+if (chapWrap) CHAPTERS.forEach((ch, ci) => {
+  const items = ch.all.map(x => ({ type: "img", src: x.full, cap: `${ch.name} · ${x.cap}` }));
+  const el = document.createElement("article");
+  el.className = "chapter reveal";
+  el.innerHTML = `
+    <div class="chapter-rail">
+      <span class="mono chapter-num">${String(ci + 1).padStart(2, "0")}</span>
+      <h3 class="chapter-name">${ch.name}</h3>
+      <p class="chapter-line">${ch.line}</p>
+      <button class="pill mono chapter-all">View all ${items.length} <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="chapter-frames">${[0, 1, 2].map(i => `<figure class="bw" data-cursor="View" data-i="${i}"><img src="${ch.all[i].thumb}" alt="${ch.all[i].cap}" loading="lazy"><figcaption class="mono">${ch.all[i].cap}</figcaption></figure>`).join("")}</div>`;
+  $(".chapter-all", el).addEventListener("click", () => open(items, 0));
+  $$("figure", el).forEach(f => f.addEventListener("click", () => open(items, +f.dataset.i)));
+  chapWrap.appendChild(el);
 });
-more.addEventListener("click", () => openPhotos(seriesList(current), 0));
 
 /* ==========================================================
    MOODBOARDS (every film) · title opens the board, image plays the film
@@ -115,55 +120,87 @@ const caseEl = $("#case"), caseInner = $("#caseInner"), caseScroll = $("#caseScr
 const FILM_ORDER = $$(".card[data-v]").map(c => c.dataset.v).filter(v => MB[v]);
 const pad2 = n => String(n).padStart(2, "0");
 
+const MBV = 9;
 function openCase(key) {
   const m = MB[key]; if (!m) return;
   const i = FILM_ORDER.indexOf(key), n = FILM_ORDER.length;
   const prev = FILM_ORDER[(i + n - 1) % n], next = FILM_ORDER[(i + 1) % n];
   const card = $(`.card[data-v="${key}"]`);
-  const shots = m.labels.map((l, k) => `<figure class="${k === 0 ? "lead" : ""}" style="animation-delay:${.12 + k * .07}s"><img src="assets/img/mb/${key}-${k + 1}.webp" alt="${m.t.join(" ")}, ${l}"><b class="chip">${l}</b></figure>`).join("");
+  const src = k => `assets/img/mb/${key}-${k + 1}.webp?v=${MBV}`;
+  const shots = m.labels.map((l, k) => `<figure class="${k === 0 ? "lead" : ""}" style="animation-delay:${.12 + k * .05}s"><img src="${src(k)}" alt="${m.t.join(" ")}, ${l}"><b class="chip"><i>${pad2(k + 1)}</i>${l}</b></figure>`).join("");
+  const tc = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  const bar = (m.bar || []).map(c => `<span style="background:${c}"></span>`).join("");
+  const marks = (m.marks || []).map((p, k) => `<b style="left:${(p * 100).toFixed(2)}%"><i>${pad2(k + 1)}</i></b>`).join("");
+  const ticks = m.beats.map(([s]) => `<u style="left:${(Math.min(s / m.dur, 1) * 100).toFixed(2)}%"></u>`).join("");
+  const type = m.phrase ? `<div class="mb-typemini"><p class="mb-label">Type</p><div><span class="aa">Aa</span><span class="it">${m.phrase}</span></div></div>` : "";
+  const pal = `<div class="mb-palmini"><p class="mb-label">Palette</p><div>${m.pal.map(([nm, hx]) => `<span><i style="background:${hx}"></i><b>${nm}</b><small>${hx}</small></span>`).join("")}</div></div>`;
   caseInner.innerHTML = `
-    <div class="mb ${m.v ? "is-v" : ""}">
-      <div class="mb-side">
-        <p class="mb-kicker">Mood board <i></i> ${pad2(i + 1)}</p>
-        <h2 class="mb-title">${m.t[0]}<em>${m.t[1]}</em></h2>
+    <div class="mb v4 ${m.palside ? "pal-side" : ""} ${m.v ? "is-v" : ""} ${m.labels.length > 5 ? "is-many" : ""} ${m.phrase ? "" : "no-type"}">
+      <header class="mb-side">
+        <p class="mb-kicker"><span>Mood board</span><i></i><span>${pad2(i + 1)} / ${pad2(n)}</span><span class="mb-cat">${m.cat || ""}</span></p>
+        <h2 class="mb-title"><span>${m.t[0]}</span><em>${m.t[1]}</em></h2>
+        ${m.vision ? `<p class="mb-vision">${m.vision}</p>` : ""}
         <p class="mb-desc">${m.desc}</p>
         <div class="mb-tags">${m.tags.map(t => `<span>${t}</span>`).join("")}</div>
         <dl class="mb-meta">${m.meta.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
-        <button class="mb-play" data-playfilm><b></b>Play the film <small>${card ? $(".dur", card).textContent : ""}</small></button>
+        ${m.palside ? `<div class="mb-sidepal">${pal}${type}</div>` : ""}
+      </header>
+      <div class="mb-main">
+        <div class="mb-grid">${shots}</div>
+        <div class="mb-timeline" aria-hidden="true">
+          <div class="mb-bar">${bar}${ticks}${marks}</div>
+          <div class="mb-tc mono"><span>0:00</span><span>The film, start to finish · numbers mark the frames above</span><span>${tc(m.dur || 0)}</span></div>
+        </div>
+        <ol class="mb-beats" style="--n:${m.beats.length}">${m.beats.map(([s, t, d]) => `<li><small>${tc(s)}</small><b>${t}</b><span>${d}</span></li>`).join("")}</ol>
       </div>
-      <div class="mb-grid">${shots}</div>
       <div class="mb-foot">
-        <div><p class="mb-label">Palette, sampled from the film</p>
-          <div class="mb-pal">${m.pal.map(([nm, hx], k) => `<div style="animation-delay:${.4 + k * .05}s"><span style="background:${hx}"></span><b>${nm}</b><small>${hx}</small></div>`).join("")}</div></div>
-        <div><p class="mb-label">Typography</p>
-          <div class="mb-type"><span class="aa">Aa</span><span class="it">${m.phrase}</span></div>
-          <p class="mb-typenote"><b>JetBrains Mono</b> Instrument Serif · title line</p></div>
-        <div class="mb-beats-wrap"><p class="mb-label">Story beats</p>
-          <ol class="mb-beats">${m.beats.map(([t, d], k) => `<li><small>${pad2(k + 1)}</small><b>${t}</b><span>${d}</span></li>`).join("")}</ol></div>
+        <button class="mb-play" data-playfilm><b></b>Play the film <small>${card ? $(".dur", card).textContent : ""}</small></button>
+        ${m.palside ? "" : pal + type}
+        <div class="mb-nav"><button data-go="${prev}" aria-label="Previous board: ${MB[prev].t.join(" ")}">← Prev</button><button data-go="${next}" aria-label="Next board: ${MB[next].t.join(" ")}">Next →</button></div>
       </div>
-    </div>
-    <div class="mb-film" id="mbFilm"></div>
-    <div class="case-nav">
-      <button data-go="${prev}"><small>← Previous board</small>${MB[prev].t.join(" ")}</button>
-      <button data-go="${next}" style="text-align:right"><small>Next board →</small>${MB[next].t.join(" ")}</button>
-    </div>
-    <p class="mb-keys">← → to move between boards · Esc to close</p>`;
+    </div>`;
   $$("[data-go]", caseInner).forEach(b => b.addEventListener("click", () => openCase(b.dataset.go)));
-  const frames = m.labels.map((l, j) => ({ type: "img", src: `assets/img/mb/${key}-${j + 1}.webp`, cap: `${m.t.join(" ")} · ${l}` }));
+  const frames = m.labels.map((l, j) => ({ type: "img", src: src(j), cap: `${m.t.join(" ")} · ${l}` }));
   $$(".mb-grid figure", caseInner).forEach((f, k) => f.addEventListener("click", () => open(frames, k)));
-  $("[data-playfilm]", caseInner).addEventListener("click", () => {
-    const box = $("#mbFilm");
-    if (!box.firstChild) {
-      box.innerHTML = `<video src="assets/video/${key}.mp4" poster="${card ? $("img", card).getAttribute("src") : ""}" controls playsinline autoplay></video>`;
-      box.classList.add(m.v ? "is-v" : "is-w");
-    }
-    box.scrollIntoView({ behavior: "smooth", block: "center" });
-    $("video", box).play().catch(() => {});
-  });
+  $("[data-playfilm]", caseInner).addEventListener("click", () => open([{ type: "video", src: `assets/video/${key}.mp4?v=3`, poster: card ? $("img", card).getAttribute("src") : "", cap: m.t.join(" ") }], 0));
   caseScroll.scrollTop = 0;
   if (!caseEl.classList.contains("open")) { caseEl.classList.add("open"); caseEl.setAttribute("aria-hidden", "false"); lockScroll(true); }
+  fitBoard();
   $("#caseClose").focus({ preventScroll: true });
 }
+/* Size the frame grid so the whole board fits one screen (desktop) */
+function fitBoard() {
+  const mb = $(".mb.v4", caseInner); if (!mb) return;
+  const main = $(".mb-main", mb), grid = $(".mb-grid", mb), n = $$("figure", grid).length, gap = 10;
+  grid.style.cssText = ""; main.style.removeProperty("--gw");
+  if (innerWidth <= 1000) return;
+  const W = grid.clientWidth, H = grid.clientHeight;
+  if (mb.classList.contains("is-v")) {
+    let best = { fw: 0 };
+    for (let r = 1; r <= 3; r++) {
+      const c = Math.ceil(n / r);
+      const fw = Math.min((W - gap * (c - 1)) / c, ((H - gap * (r - 1)) / r) * 9 / 16);
+      if (fw > best.fw + 4) best = { fw, c, r };
+    }
+    const fw = Math.floor(best.fw), fh = Math.floor(fw * 16 / 9);
+    grid.style.cssText = `flex:none;grid-template-columns:repeat(${best.c},${fw}px);grid-template-rows:repeat(${best.r},${fh}px)`;
+  } else {
+    /* lead frame spans a 2x2 block; the other frames fill the remaining cells */
+    let best = { s: 0 };
+    for (let C = 3; C <= 5; C++) for (let R = 2; R <= 4; R++) {
+      if (C * R - 4 !== n - 1) continue;
+      const s = Math.min((W - gap * (C - 1)) / C, ((H - gap * (R - 1)) / R) * 16 / 9);
+      if (s > best.s) best = { s, C, R };
+    }
+    if (!best.C) best = { s: Math.min((W - 3 * gap) / 4, (H - gap) / 2 * 16 / 9), C: 4, R: 2 };
+    const s = Math.floor(best.s), h = Math.floor(s * 9 / 16);
+    grid.style.cssText = `flex:none;grid-template-columns:repeat(${best.C},${s}px);grid-template-rows:repeat(${best.R},${h}px)`;
+  }
+  /* timeline and beats share the frame grid's exact width */
+  const gw = [...getComputedStyle(grid).gridTemplateColumns.split(" ")].reduce((a, v) => a + parseFloat(v), 0) + gap * (getComputedStyle(grid).gridTemplateColumns.split(" ").length - 1);
+  main.style.setProperty("--gw", `${Math.ceil(gw)}px`);
+}
+addEventListener("resize", () => { if (caseEl.classList.contains("open")) fitBoard(); });
 function closeCase() {
   const v = $("video", caseInner); if (v) v.pause();
   caseEl.classList.remove("open"); caseEl.setAttribute("aria-hidden", "true"); lockScroll(false);
@@ -243,7 +280,7 @@ const asButton = (el, label, fn) => {
 };
 $$("[data-group]").forEach(g => {
   const cards = $$(".card[data-v]", g);
-  const items = cards.map(c => ({ type: "video", src: `assets/video/${c.dataset.v}.mp4`, poster: $("img", c).getAttribute("src"), cap: c.dataset.t }));
+  const items = cards.map(c => ({ type: "video", src: `assets/video/${c.dataset.v}.mp4?v=3`, poster: $("img", c).getAttribute("src"), cap: c.dataset.t }));
   cards.forEach((c, i) => {
     const frame = $(".frame", c), meta = $(".meta", c);
     frame.dataset.cursor = "Play";
@@ -392,4 +429,3 @@ document.addEventListener("keydown", e => {
   else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   else if (!d.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
 });
-showSeries(SERIES[0]);

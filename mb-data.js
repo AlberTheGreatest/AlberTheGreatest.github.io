@@ -5,6 +5,8 @@ const MB = {
 "BellaVista",
 "Milano"
 ],
+"cat": "Eyewear · AI spec campaign",
+"vision": "A luxury eyewear film about presence: one man, his style, and how the right frame completes it.",
 "desc": "“True luxury doesn't shout.” Espresso on a cliffside terrace, a vintage convertible along the coast and low sun through the windshield. Quiet Italian luxury, art-directed frame by frame.",
 "tags": [
 "Golden hour",
@@ -30,66 +32,170 @@ const MB = {
 "23 s · 16:9"
 ]
 ],
+"phrase": "doesn't shout",
+"v": false,
 "labels": [
 "The terrace",
 "The look",
 "The coast road",
 "The drive",
+"To camera",
 "The pair"
+],
+"palside": true,
+"times": [
+0.72,
+5.05,
+9.38,
+12.2,
+16.9,
+18.0
 ],
 "beats": [
 [
+0,
 "The ritual",
-"Espresso, sunglasses on the table"
+"Espresso, the pair on the table"
 ],
 [
+4,
 "The look",
-"Lemon trees, the sea"
+"Sunglasses on, the sea behind"
 ],
 [
-"The road",
-"Convertible, low sun"
+8.5,
+"The drive",
+"A convertible on the coast road"
 ],
 [
+16.5,
 "The product",
-"Tortoiseshell on leather"
+"The smile, then the pair on its case"
+],
+[
+20,
+"The sign-off",
+"BellaVista Milano"
 ]
 ],
-"phrase": "doesn't shout",
 "pal": [
 [
-"Ink",
-"#332318"
+"Coffee",
+"#54321C"
 ],
 [
-"Mocha",
-"#5C4C38"
+"Olive",
+"#676050"
 ],
 [
-"Ash",
-"#898B7E"
+"Sea",
+"#73939B"
 ],
 [
-"Sand",
-"#BFAA93"
+"Stone",
+"#A2886D"
 ],
 [
-"Petal",
-"#DBCCB7"
+"Linen",
+"#DFC8B0"
 ],
 [
 "Ivory",
-"#F0E5D2"
+"#FAEEDC"
 ]
 ],
-"v": false
+"bar": [
+"#6C6657",
+"#6E6859",
+"#6F6959",
+"#6F6959",
+"#6F6858",
+"#6E6757",
+"#6C6656",
+"#696253",
+"#665F50",
+"#655E4F",
+"#675F50",
+"#6C6150",
+"#96856E",
+"#958670",
+"#948670",
+"#948670",
+"#948570",
+"#93846F",
+"#93846F",
+"#92846E",
+"#92846F",
+"#92846F",
+"#92846F",
+"#93846F",
+"#93846F",
+"#7E7768",
+"#827A6B",
+"#847C6D",
+"#877E6F",
+"#887F6F",
+"#898071",
+"#8B8171",
+"#8C8171",
+"#8C8172",
+"#8C8071",
+"#8C8070",
+"#8D8171",
+"#756C5F",
+"#766C5E",
+"#796F61",
+"#7C7264",
+"#7C7365",
+"#796F62",
+"#6C6356",
+"#736B5F",
+"#7D7669",
+"#7F786B",
+"#7F776A",
+"#7F776A",
+"#A08064",
+"#A08064",
+"#A07F64",
+"#9F7F64",
+"#9D7C65",
+"#9C7B64",
+"#9C7B65",
+"#9B7A63",
+"#9B7A64",
+"#9B7C64",
+"#9B7C64",
+"#9A7C63",
+"#987A62",
+"#010101",
+"#010101",
+"#010101",
+"#010101",
+"#010101",
+"#010101",
+"#010101",
+"#010101",
+"#010101",
+"#010101"
+],
+"marks": [
+0.0309,
+0.2168,
+0.4027,
+0.5238,
+0.7256,
+0.7728
+],
+"dur": 23.3
 },
 "solea": {
 "t": [
 "Soléa",
 "Botanical Glow"
 ],
-"desc": "A social-first beauty ad: a creator-style, to-camera testimonial cut with sunlit macro product shots among olive trees. The language of UGC with a premium finish.",
+"cat": "Skincare · AI spec campaign",
+"vision": "A skincare ad that feels like a friend's recommendation and looks like a campaign: creator honesty, premium light.",
+"desc": "A to-camera testimonial cut with sunlit macro product shots among olive trees. The UGC format earns trust; the Mediterranean light, stone and oil textures give it a luxury finish.",
 "tags": [
 "UGC format",
 "Olive grove",
@@ -114,66 +220,170 @@ const MB = {
 "21 s · 16:9"
 ]
 ],
+"phrase": "two drops",
+"v": false,
 "labels": [
 "To camera",
 "The bottle",
 "The ritual",
+"The dropper",
 "Two drops",
-"The glow"
+"The packshot"
+],
+"palside": true,
+"times": [
+0.66,
+5.94,
+7.29,
+9.6,
+11.2,
+17.1
 ],
 "beats": [
 [
+0,
 "The hook",
-"A friend talking to camera"
+"To camera: “If your skin feels dull”"
 ],
 [
+4.5,
 "The product",
-"Bottle on water and stone"
+"The bottle on water and stone"
 ],
 [
-"The proof",
-"Dropper, skin, light"
+6.5,
+"The ritual",
+"Dropper, skin, morning light"
 ],
 [
-"The finish",
-"Glow and packshot"
+11,
+"The result",
+"“Like I slept ten hours”"
+],
+[
+16,
+"The packshot",
+"Bottle, dropper, olive branch"
 ]
 ],
-"phrase": "two drops",
 "pal": [
 [
-"Espresso",
-"#463822"
+"Ink",
+"#221B0D"
 ],
 [
-"Bronze",
-"#7F553A"
+"Coffee",
+"#51432C"
 ],
 [
-"Terracotta",
-"#867059"
+"Cognac",
+"#875734"
 ],
 [
 "Clay",
-"#A9764F"
+"#A77F5B"
 ],
 [
-"Blush",
-"#C2A27D"
+"Sand",
+"#CDB398"
 ],
 [
-"Linen",
-"#E2D7C5"
+"Ivory",
+"#F2EEE4"
 ]
 ],
-"v": false
+"bar": [
+"#8B7156",
+"#836B52",
+"#806750",
+"#81674F",
+"#81674F",
+"#836950",
+"#82684F",
+"#836951",
+"#846A51",
+"#856B52",
+"#836A51",
+"#846A52",
+"#856A52",
+"#938068",
+"#917E66",
+"#8F7C65",
+"#8F7C65",
+"#8F7D66",
+"#907D66",
+"#917F67",
+"#978671",
+"#AB9F8D",
+"#8C7358",
+"#8D7459",
+"#8D7458",
+"#8C7357",
+"#8B7256",
+"#8B7256",
+"#94653E",
+"#95653E",
+"#95653F",
+"#94653E",
+"#95653F",
+"#95653F",
+"#95653F",
+"#95653F",
+"#87664D",
+"#88684F",
+"#87664D",
+"#896950",
+"#886950",
+"#896850",
+"#896850",
+"#896951",
+"#886950",
+"#896A52",
+"#8A6C54",
+"#896B52",
+"#896B53",
+"#886B53",
+"#896C54",
+"#896C53",
+"#8A6C54",
+"#8A6D54",
+"#B59771",
+"#B69771",
+"#B69771",
+"#B69771",
+"#B69771",
+"#B49570",
+"#A68968",
+"#987F61",
+"#8A7459",
+"#816B54",
+"#76634E",
+"#6E5D48",
+"#6D5C47",
+"#6D5C48",
+"#6D5C47",
+"#6D5C48",
+"#6D5C48",
+"#6D5C48"
+],
+"marks": [
+0.031,
+0.279,
+0.3424,
+0.4509,
+0.526,
+0.8031
+],
+"dur": 21.3
 },
 "aurasync": {
 "t": [
 "AuraSync",
 "Moves With You"
 ],
-"desc": "“Sound that moves with you.” A day-in-the-life spot that follows one consistent character from a morning ritual to city streets to the running track.",
+"cat": "Audio · AI spec campaign",
+"vision": "Headphones as a companion: the same sound carries one man through his whole day.",
+"desc": "“Sound that moves with you.” One consistent character from the morning kitchen to the city corner to the running track, the headphones always in frame and always the point.",
 "tags": [
 "One character",
 "Morning light",
@@ -198,71 +408,175 @@ const MB = {
 "35 s · 16:9"
 ]
 ],
+"phrase": "moves with you",
+"v": false,
 "labels": [
 "Morning",
-"The coffee",
-"The street",
+"Headphones on",
+"Out the door",
 "The corner shop",
+"The run",
 "The track"
+],
+"palside": true,
+"times": [
+1.07,
+3.22,
+13.0,
+18.27,
+24.71,
+31.16
 ],
 "beats": [
 [
+0,
 "Morning",
-"Kitchen, headphones on"
+"The kitchen, headphones on"
 ],
 [
+7.5,
 "The ritual",
-"Coffee, slow start"
+"Coffee poured, ready for the day"
 ],
 [
+12.5,
 "The city",
-"Cobblestones, yellow cab"
+"Out the door, down the street"
 ],
 [
-"The run",
-"Track, sweat, focus"
+23,
+"The track",
+"Running, sweat, total focus"
+],
+[
+33,
+"The sign-off",
+"“Sound that moves with you”"
 ]
 ],
-"phrase": "moves with you",
 "pal": [
 [
-"Charcoal",
-"#332A1D"
+"Night",
+"#000405"
 ],
 [
-"Moss",
-"#4D4F40"
+"Espresso",
+"#4D4B3D"
 ],
 [
-"Bronze",
-"#7A5540"
+"Cognac",
+"#915C40"
 ],
 [
-"Terracotta",
-"#857966"
+"Smoke",
+"#447792"
 ],
 [
-"Stone",
-"#A99E90"
+"Blush",
+"#AF9C8A"
 ],
 [
-"Veil",
-"#CFC1B2"
+"Linen",
+"#DAD0C2"
 ]
 ],
-"v": false
-},
-"royalty": {
-"t": [
-"Where Royalty",
-"Is Made"
+"bar": [
+"#7D6F5C",
+"#7D6F5D",
+"#7C6F5C",
+"#7D6F5B",
+"#786957",
+"#776756",
+"#756654",
+"#736452",
+"#716251",
+"#706150",
+"#6F604F",
+"#70604E",
+"#6F5F4E",
+"#6F5F4E",
+"#6F5F4D",
+"#8B7F6F",
+"#8E8171",
+"#8F8372",
+"#908474",
+"#796B59",
+"#796B5A",
+"#796C5A",
+"#796B59",
+"#786B59",
+"#786B59",
+"#6F6150",
+"#706150",
+"#6F604E",
+"#746352",
+"#6E6658",
+"#706759",
+"#746A5A",
+"#776C5D",
+"#796E60",
+"#7C7061",
+"#7C7162",
+"#655949",
+"#635848",
+"#5D5547",
+"#5B5345",
+"#564C3E",
+"#544A3D",
+"#4E473B",
+"#4C4337",
+"#4D4436",
+"#795E4E",
+"#7F6353",
+"#7D6050",
+"#7F6253",
+"#7D6051",
+"#7F6251",
+"#7D6354",
+"#7C6354",
+"#7F6757",
+"#816756",
+"#7C6756",
+"#7E6858",
+"#816958",
+"#7F6857",
+"#866A58",
+"#685F56",
+"#635D56",
+"#5F5955",
+"#5B5854",
+"#5E5953",
+"#5E5853",
+"#5E5953",
+"#030303",
+"#030303",
+"#030303",
+"#030303",
+"#030303"
 ],
-"desc": "A fantasy epic in twenty-one seconds. Heavy doors open, a figure stands in the light, a hand chooses the ring, and the ring rides out on the reins of a dragon.",
+"marks": [
+0.0309,
+0.0931,
+0.3759,
+0.5283,
+0.7145,
+0.901
+],
+"dur": 34.6
+},
+"four-seasons": {
+"t": [
+"The Twig",
+"Four Seasons"
+],
+"cat": "AI film",
+"vision": "One ring that never changes while the whole world around it does.",
+"desc": "The twig-band oval rests on moss as the light turns from summer gold to autumn, frost and blossom. The ring stays perfectly still, sharp and true: seasons pass, the promise stays.",
 "tags": [
-"Epic fantasy",
-"Torch and dusk",
-"Hands and leather",
-"Scale against detail"
+"Golden hour",
+"Nature in time-lapse",
+"One fixed ring",
+"Macro on moss"
 ],
 "meta": [
 [
@@ -270,78 +584,182 @@ const MB = {
 "Keyzar Jewelry"
 ],
 [
-"Execution and frames",
+"Concept, AI, edit",
 "Albert Shamaev"
 ],
 [
-"Concept",
-"Chaz"
+"Format",
+"18 s · 9:16"
 ],
 [
-"Format",
-"21 s · 9:16"
+"Look",
+"Macro, natural light"
 ]
 ],
+"phrase": null,
+"v": true,
 "labels": [
-"The doors",
-"The figure",
-"The choice",
-"The ride",
-"Royalty"
+"Summer",
+"Autumn",
+"First frost",
+"Winter",
+"Spring",
+"Summer again"
+],
+"palside": true,
+"times": [
+1.1,
+3.4,
+6.2,
+7.8,
+11.0,
+15.5
 ],
 "beats": [
 [
-"The doors",
-"Opening"
+0,
+"Summer",
+"Sun through the trees"
 ],
 [
-"The figure",
-"In the light"
+2.5,
+"Autumn",
+"Gold, amber, falling leaves"
 ],
 [
-"The choice",
-"The ring is chosen"
+6.5,
+"Winter",
+"Frost on the moss"
 ],
 [
-"Royalty",
-"Above the clouds"
+10.5,
+"Spring",
+"Blossom and petals"
+],
+[
+14.5,
+"Full circle",
+"Summer again, the ring unchanged"
 ]
 ],
-"phrase": "where royalty is made",
 "pal": [
 [
-"Ink",
-"#1A1718"
+"Coffee",
+"#402C14"
 ],
 [
-"Espresso",
-"#443130"
+"Brick",
+"#6E3815"
 ],
 [
-"Slate",
-"#4C4B54"
+"Moss",
+"#625D1B"
 ],
 [
-"Bronze",
-"#865144"
+"Rust",
+"#974C19"
 ],
 [
-"Terracotta",
-"#936E62"
+"Ochre",
+"#807A25"
 ],
 [
-"Sand",
-"#D0B193"
+"Honey",
+"#CDBB46"
 ]
 ],
-"v": true
+"bar": [
+"#787129",
+"#787029",
+"#776D29",
+"#746927",
+"#706425",
+"#6D6023",
+"#6A5921",
+"#68521D",
+"#694B1B",
+"#6B481B",
+"#774A1A",
+"#79481A",
+"#7E481C",
+"#854A1F",
+"#85481D",
+"#81441C",
+"#7E421C",
+"#7C411C",
+"#79411D",
+"#74401E",
+"#6E3F21",
+"#6B4023",
+"#694128",
+"#6A4630",
+"#6C4C3A",
+"#6F5446",
+"#735C54",
+"#756561",
+"#757074",
+"#77777E",
+"#787A84",
+"#787B87",
+"#787C88",
+"#767A86",
+"#717580",
+"#6B6F77",
+"#66696C",
+"#656767",
+"#62635C",
+"#626052",
+"#676049",
+"#726649",
+"#776746",
+"#7E6C4A",
+"#83704E",
+"#85714E",
+"#86714F",
+"#85714D",
+"#84714C",
+"#826F4B",
+"#7F6C48",
+"#7B6846",
+"#786645",
+"#72623F",
+"#6E603B",
+"#685E31",
+"#645D29",
+"#6A6529",
+"#76702B",
+"#7D762E",
+"#7E762E",
+"#7D762E",
+"#7C742C",
+"#7A722A",
+"#787129",
+"#787129",
+"#787129",
+"#787129",
+"#787129",
+"#787129",
+"#787129",
+"#777129"
+],
+"marks": [
+0.0611,
+0.1889,
+0.3444,
+0.4333,
+0.6111,
+0.8611
+],
+"dur": 18.0
 },
 "sketch-to-ring": {
 "t": [
 "Atelier",
 "Sketch to Ring"
 ],
-"desc": "The ring before it is a ring. A pencil line on paper, the metal at the bench, the stone set by hand, and the finished emerald cut in her fingers. AI sketches meet real workshop footage.",
+"cat": "AI + live action",
+"vision": "The ring before it is a ring: from a pencil line to the finger, in five steps.",
+"desc": "AI-drawn sketches meet real workshop footage. Each step is drawn first, then made at the bench: the pencil line, the metal, the stone, the setting, and the finished emerald cut in her fingers.",
 "tags": [
 "Graphite on paper",
 "Hand of the maker",
@@ -362,75 +780,179 @@ const MB = {
 "29 s · 9:16"
 ],
 [
-"Series",
-"Sketch to Ring"
-]
-],
-"labels": [
-"The first ring",
-"The flame",
-"The bench",
-"The setting",
-"The sketch"
-],
-"beats": [
-[
-"The pencil",
-"First a pencil line"
-],
-[
-"The metal",
-"Then the metal"
-],
-[
-"The stone",
-"Then the stone"
-],
-[
-"It's yours",
-"Crafted for a lifetime"
+"Method",
+"AI sketches · Bench footage"
 ]
 ],
 "phrase": "first a pencil line",
+"v": true,
+"labels": [
+"A pencil line",
+"The first ring",
+"The flame",
+"Then the stone",
+"The setting",
+"It's yours"
+],
+"palside": true,
+"times": [
+1.9,
+4.4,
+9.8,
+13.9,
+16.9,
+23.2
+],
+"beats": [
+[
+0,
+"The pencil",
+"A pencil line, then the cast"
+],
+[
+6.3,
+"The metal",
+"Drawn, then soldered in flame"
+],
+[
+12.3,
+"The stone",
+"Drawn, then set at the bench"
+],
+[
+18.3,
+"The design",
+"The finished sketch"
+],
+[
+20.5,
+"It's yours",
+"Emerald cut in her fingers"
+]
+],
 "pal": [
 [
-"Espresso",
-"#41443E"
+"Ink",
+"#20272A"
 ],
 [
-"Ash",
-"#898C83"
+"Graphite",
+"#5A584E"
 ],
 [
-"Stone",
-"#A9A193"
+"Clay",
+"#A97562"
+],
+[
+"Sage",
+"#AEA786"
 ],
 [
 "Veil",
-"#C1BCAF"
+"#D5C9AE"
 ],
 [
-"Linen",
-"#D1CABC"
-],
-[
-"Ivory",
-"#E3E0D4"
+"Snow",
+"#F3F4F2"
 ]
 ],
-"v": true
-},
-"diamond-rain": {
-"t": [
-"Diamond",
-"Rain"
+"bar": [
+"#CFC7BD",
+"#D0C8BE",
+"#D0C8BF",
+"#D1C9C0",
+"#D2CBC2",
+"#D0CEC2",
+"#D0CEC2",
+"#CDCBC0",
+"#AFAB9F",
+"#B1AB9F",
+"#B2ABA0",
+"#B2AB9F",
+"#B1AA9F",
+"#B0A99E",
+"#A19A92",
+"#A29B94",
+"#A49C95",
+"#A39F96",
+"#B3B1A7",
+"#B3B1A7",
+"#B4B3A9",
+"#B5B5AB",
+"#919184",
+"#8B877B",
+"#8B877B",
+"#8A877B",
+"#8A877B",
+"#8B877B",
+"#8B877B",
+"#8B887B",
+"#C8BFB6",
+"#C8BEB6",
+"#C8BEB6",
+"#C8BEB6",
+"#C9C1B8",
+"#CECAC0",
+"#CDCABF",
+"#CBC8BE",
+"#6B7064",
+"#63675C",
+"#5D6055",
+"#595B52",
+"#5A5C53",
+"#64665A",
+"#6D6D60",
+"#C6BDB2",
+"#C6BDB2",
+"#C5BCB2",
+"#C5BFB4",
+"#C5C3B7",
+"#C6C4B7",
+"#C3BDAD",
+"#BFAA8F",
+"#BFAA8E",
+"#C0AA8F",
+"#C0AA8E",
+"#C0AA8E",
+"#C0AA8E",
+"#C0AB8F",
+"#C0AB8F",
+"#C0AB8F",
+"#C0AB8F",
+"#C0AB8F",
+"#C0AB8F",
+"#4C4437",
+"#030402",
+"#000000",
+"#000000",
+"#000000",
+"#000000",
+"#000000",
+"#000000"
 ],
-"desc": "A CG jewelry film in thirteen seconds. Diamonds fall through the dark, gold pours like liquid, rings of gold orbit the setting and the ring stands alone in the rain.",
+"marks": [
+0.0664,
+0.1538,
+0.3427,
+0.486,
+0.5909,
+0.8112
+],
+"dur": 28.6
+},
+"royalty": {
+"t": [
+"Where Royalty",
+"Is Made"
+],
+"cat": "AI film",
+"vision": "An engagement ring told as a fantasy epic: the scale of a kingdom, the detail of a single stone.",
+"desc": "Heavy doors open, the ring waits on frosted stone, a hand lifts it, and it rides out on the reins of a dragon above the clouds. Twenty-one seconds, one ring at the centre of every shot.",
 "tags": [
-"Black glass",
-"Liquid gold",
-"Orbit",
-"Falling light"
+"Epic fantasy",
+"Torch and dusk",
+"Hands and leather",
+"Scale against detail"
 ],
 "meta": [
 [
@@ -438,78 +960,182 @@ const MB = {
 "Keyzar Jewelry"
 ],
 [
-"Concept, AI, edit",
+"Execution and frames",
 "Albert Shamaev"
 ],
 [
 "Format",
-"13 s · 9:16"
+"21 s · 9:16"
 ],
 [
 "Look",
-"CG macro"
+"Fantasy epic"
 ]
 ],
+"phrase": "where royalty is made",
+"v": true,
 "labels": [
-"The rain",
-"Liquid gold",
-"The orbit",
-"The crown",
-"The ring"
+"The doors",
+"The figure",
+"The choice",
+"On the reins",
+"The ride",
+"Royalty"
+],
+"palside": true,
+"times": [
+1.7,
+5.1,
+8.6,
+12.0,
+15.4,
+18.6
 ],
 "beats": [
 [
-"The rain",
-"Diamonds in the dark"
+0,
+"The doors",
+"Hands push them open"
 ],
 [
-"The pour",
-"Gold becomes metal"
+2.6,
+"The figure",
+"The ring on stone, a figure in the light"
 ],
 [
-"The orbit",
-"The ring takes shape"
+6.5,
+"The choice",
+"A hand lifts the ring"
 ],
 [
-"The ring",
-"Alone in the rain"
+10.3,
+"The ride",
+"On the reins, above the clouds"
+],
+[
+17,
+"The title",
+"“Where Royalty Is Made”"
 ]
 ],
-"phrase": "liquid gold",
 "pal": [
 [
-"Ink",
-"#191B1E"
-],
-[
 "Charcoal",
-"#2E353C"
+"#3E2C29"
 ],
 [
-"Espresso",
-"#3E3D3E"
-],
-[
-"Slate",
-"#4F5154"
+"Storm",
+"#414857"
 ],
 [
 "Smoke",
-"#767271"
+"#5F7089"
 ],
 [
-"Veil",
-"#B9B3AB"
+"Copper",
+"#A26147"
+],
+[
+"Blush",
+"#D0966B"
+],
+[
+"Dove",
+"#B1A2A0"
 ]
 ],
-"v": true
+"bar": [
+"#2B2C2B",
+"#232322",
+"#222221",
+"#242322",
+"#292724",
+"#2F2A26",
+"#372F29",
+"#3F352B",
+"#303640",
+"#333840",
+"#363A42",
+"#3A3C43",
+"#3E3F45",
+"#444246",
+"#4C4749",
+"#534D4B",
+"#59514E",
+"#605652",
+"#655B55",
+"#695F57",
+"#6C6159",
+"#6D635A",
+"#46464C",
+"#45444C",
+"#464149",
+"#473E45",
+"#463D44",
+"#463D44",
+"#463D43",
+"#463D43",
+"#473C43",
+"#473D43",
+"#473D43",
+"#473D44",
+"#463C43",
+"#453C44",
+"#4F4044",
+"#6E4D42",
+"#875640",
+"#88563F",
+"#89573F",
+"#8D5840",
+"#905B40",
+"#945C40",
+"#975E41",
+"#975E41",
+"#975E41",
+"#975E41",
+"#965E41",
+"#955E40",
+"#5A473A",
+"#5A473B",
+"#5C493C",
+"#5E4B3D",
+"#5E4C3E",
+"#5F4C3E",
+"#5E4B3D",
+"#5B493B",
+"#89746C",
+"#8B766D",
+"#8C776E",
+"#8D786E",
+"#8E786E",
+"#8F796F",
+"#8F796F",
+"#8E7970",
+"#8E796F",
+"#8E7970",
+"#8E7A70",
+"#8E7970",
+"#8E7A71",
+"#8E7970"
+],
+"marks": [
+0.0828,
+0.2483,
+0.4187,
+0.5842,
+0.7497,
+0.9055
+],
+"dur": 20.5
 },
 "bride": {
 "t": [
 "The Bride",
-"All Locations"
+"Sea, Stone & Garden"
 ],
-"desc": "The whole bridal shoot day in thirty seconds: a convertible by the sea, the chapel doors on a city street and a garden. Each location keeps its own light, and the details are woven between the moments.",
+"cat": "Brand film",
+"vision": "One wedding day, three worlds, and the jewelry that connects them.",
+"desc": "A bridal film shot across three locations in a single day: a convertible by the sea, the chapel doors on a stone street, a garden under lemon trees. Each place keeps its own light; the bracelet, the earrings and the ring run through all of them.",
 "tags": [
 "Sea light",
 "City stone",
@@ -527,73 +1153,182 @@ const MB = {
 ],
 [
 "Concept",
-"Keyzar Creative Director, with Albert"
+"Creative Director & Albert"
 ],
 [
 "Format",
 "35 s · 16:9 · 2024"
 ]
 ],
+"phrase": null,
+"v": false,
 "labels": [
-"The convertible",
+"By the sea",
 "The greeting",
-"Her gaze",
+"The convertible",
 "The chapel",
-"The ring"
+"The ring",
+"Under the lemon tree"
+],
+"palside": true,
+"times": [
+3.7,
+7.8,
+15.2,
+18.5,
+26.9,
+30.4
 ],
 "beats": [
 [
-"The sea",
-"The convertible"
+0,
+"By the sea",
+"The convertible, the bracelet"
 ],
 [
+7.3,
 "The garden",
-"The greeting"
+"The greeting, her gaze"
 ],
 [
-"The street",
-"The chapel lift"
+11,
+"The drive",
+"Laughter in the car"
 ],
 [
+16,
+"The chapel",
+"Stone doors, the embrace"
+],
+[
+20,
 "The details",
-"The oval, the last look"
+"The sea, the bracelet, the ring"
+],
+[
+29.5,
+"The lemon tree",
+"The closing kiss"
 ]
 ],
-"phrase": "three places",
 "pal": [
 [
-"Charcoal",
-"#352C2B"
+"Espresso",
+"#443D3B"
 ],
 [
-"Olive",
-"#716054"
+"Taupe",
+"#7A5F53"
 ],
 [
-"Terracotta",
-"#937261"
-],
-[
-"Stone",
-"#A28A79"
+"Ash",
+"#9C867F"
 ],
 [
 "Sand",
-"#B6A698"
+"#C3ADA1"
 ],
 [
-"Veil",
-"#CECABC"
+"Sky",
+"#A5C9E3"
+],
+[
+"Ivory",
+"#E0E0DE"
 ]
 ],
-"v": false
+"bar": [
+"#6D7887",
+"#6F8498",
+"#645251",
+"#655451",
+"#8A6F6B",
+"#927772",
+"#907671",
+"#727379",
+"#707177",
+"#7F6D63",
+"#877468",
+"#A1918B",
+"#AF9E99",
+"#9FA2A6",
+"#A0A3A7",
+"#827151",
+"#827152",
+"#857354",
+"#917D5D",
+"#BB9F87",
+"#91877E",
+"#91877F",
+"#958B83",
+"#836C63",
+"#866F65",
+"#977769",
+"#967769",
+"#8E7770",
+"#8E776F",
+"#7F6E6F",
+"#827275",
+"#8E7C73",
+"#917E76",
+"#99827B",
+"#BC9C7D",
+"#948474",
+"#938272",
+"#928070",
+"#8D7B6B",
+"#7D6154",
+"#9C7267",
+"#92969C",
+"#2A303D",
+"#D5C9BF",
+"#AA8274",
+"#AD8778",
+"#AB8675",
+"#7B91A9",
+"#798EA7",
+"#8A7772",
+"#876855",
+"#8E6D5A",
+"#6A5E52",
+"#6A5D52",
+"#6D655F",
+"#6B635D",
+"#939FA8",
+"#7FA647",
+"#6D90AC",
+"#6D90AD",
+"#E0C2B3",
+"#C3AEAC",
+"#7F7B3F",
+"#7E7A3F",
+"#9E817E",
+"#A0827F",
+"#696551",
+"#6B6752",
+"#696751",
+"#000000",
+"#010101",
+"#000000"
+],
+"marks": [
+0.1067,
+0.2249,
+0.4383,
+0.5334,
+0.7757,
+0.8766
+],
+"dur": 34.7
 },
 "shoot-days": {
 "t": [
 "Shoot Days",
 "Behind Every Frame"
 ],
-"desc": "A brand film built from Keyzar's 2024 to 2025 shoot days: studio portraits, couples, hands and rings, ending on a sunset proposal by the sea.",
+"cat": "Brand film",
+"vision": "A year of Keyzar shoots in one minute: the brand's world, seen from behind the camera.",
+"desc": "Hands and rings up close, studio portraits on white, couples in warm light and a sunset proposal on the beach. Built from Keyzar's 2024–2025 shoot days.",
 "tags": [
 "Studio white",
 "Skin and light",
@@ -611,73 +1346,182 @@ const MB = {
 ],
 [
 "Concept",
-"Keyzar Creative Director, with Albert"
+"Creative Director & Albert"
 ],
 [
 "Format",
 "60 s · 16:9"
 ]
 ],
+"phrase": "behind every frame",
+"v": false,
 "labels": [
-"The band",
-"The reaction",
-"The stack",
-"The embrace",
+"The light",
+"The blonde",
+"The glance",
+"The laugh",
+"The ring",
 "The proposal"
+],
+"palside": true,
+"times": [
+16.8,
+20.4,
+22.5,
+35.5,
+39.2,
+46.7
 ],
 "beats": [
 [
+0,
+"The title",
+"“Behind every frame”"
+],
+[
+4.5,
+"The details",
+"Hands, bands and stacks"
+],
+[
+12.5,
 "The studio",
 "Portraits on white"
 ],
 [
-"The details",
-"Hands, bands, stacks"
+18.5,
+"The pairs",
+"Split-screen moments"
 ],
 [
-"The couples",
-"Laughter and touch"
-],
-[
+28.5,
 "The beach",
-"A proposal at sunset"
+"Couples by the sea"
+],
+[
+44,
+"The proposal",
+"One knee at sunset"
 ]
 ],
-"phrase": "behind every frame",
 "pal": [
 [
-"Ink",
-"#2F201B"
+"Charcoal",
+"#422D25"
 ],
 [
-"Bronze",
-"#7C5B4E"
+"Mocha",
+"#774A36"
+],
+[
+"Red",
+"#C63A47"
 ],
 [
 "Clay",
-"#A77869"
+"#AA7F6A"
 ],
 [
-"Blush",
-"#C49E8F"
-],
-[
-"Linen",
-"#E6CEC1"
+"Sand",
+"#BAADA2"
 ],
 [
 "Ivory",
-"#F3E7E3"
+"#F1ECE9"
 ]
 ],
-"v": false
+"bar": [
+"#F1EDEA",
+"#EEEAE7",
+"#EEEAE7",
+"#EEEAE7",
+"#D6D4D4",
+"#968F91",
+"#986A50",
+"#A19088",
+"#9B8A81",
+"#AEA29C",
+"#54372A",
+"#5D3C2E",
+"#613F30",
+"#623F30",
+"#A89085",
+"#B1A49E",
+"#AD9F98",
+"#B68267",
+"#CBC2BC",
+"#C5BEB9",
+"#D4CFCE",
+"#D5CFCE",
+"#A39386",
+"#A39285",
+"#998881",
+"#B4867E",
+"#B58E86",
+"#B18D84",
+"#C2A6A4",
+"#C3A7A4",
+"#8B6A64",
+"#A18877",
+"#A38A79",
+"#94756F",
+"#9E908A",
+"#9F918A",
+"#C2B4A8",
+"#C1B3A7",
+"#C1B3A6",
+"#AEA4A3",
+"#AA9F9E",
+"#896F5C",
+"#836A59",
+"#867060",
+"#947E74",
+"#947E74",
+"#7D5F51",
+"#7E6050",
+"#876454",
+"#A1968B",
+"#A09589",
+"#8B7165",
+"#866E64",
+"#846A61",
+"#CAB7AE",
+"#D1BEB4",
+"#D3C0B5",
+"#D7C4B9",
+"#CEAD9B",
+"#D0AE9D",
+"#CFAF9D",
+"#CEAD9B",
+"#A99688",
+"#998574",
+"#A38D7B",
+"#CEC3B6",
+"#EEEBE7",
+"#EEEBE7",
+"#EEEBE7",
+"#EEEBE7",
+"#EEEBE7",
+"#565554"
+],
+"marks": [
+0.28,
+0.34,
+0.375,
+0.5917,
+0.6533,
+0.7783
+],
+"dur": 60.0
 },
 "made-by-hand": {
 "t": [
 "Made by",
 "Hand"
 ],
-"desc": "A craft film in three chapters: it starts as fire, it is set stone by stone, and it is polished until it shines. Macro hands, tools and metal, ending on the finished marquise on the mandrel.",
+"cat": "Craft film",
+"vision": "Proof of craft: every ring starts as fire and ends in a setter's hands.",
+"desc": "A craft film in three chapters, shot in macro at the bench: it starts as fire, it is set stone by stone, and it is polished until it shines, ending on the finished marquise on the mandrel.",
 "tags": [
 "Fire",
 "Stone by stone",
@@ -702,154 +1546,183 @@ const MB = {
 "60 s · 16:9"
 ]
 ],
+"phrase": "until it shines",
+"v": false,
 "labels": [
-"The wheel",
+"Shaping",
 "The flame",
-"The setting",
+"Filing",
+"Side stones",
+"Setting the pavé",
 "The marquise",
-"The mandrel"
+"Closing the prongs",
+"Polishing",
+"Finished"
+],
+"palside": true,
+"times": [
+5.0,
+9.0,
+13.0,
+19.0,
+25.0,
+29.0,
+39.1,
+41.0,
+49.0
 ],
 "beats": [
 [
+0,
 "01 Fire",
-"It starts as fire"
+"Shaping, soldering, filing"
 ],
 [
+16.5,
 "02 Setting",
-"Stone by stone"
+"Side stones, the marquise, the prongs"
 ],
 [
+34.5,
 "03 Finishing",
-"Until it shines"
+"Polished until it shines"
 ],
 [
+46.5,
 "The ring",
-"Made by hand"
+"Finished on the mandrel"
+],
+[
+52.5,
+"The title",
+"“Made by hand”"
 ]
 ],
-"phrase": "until it shines",
 "pal": [
 [
-"Mocha",
-"#665348"
+"Charcoal",
+"#332620"
 ],
 [
-"Stone",
-"#A4968F"
+"Mocha",
+"#5D4940"
+],
+[
+"Terracotta",
+"#887264"
+],
+[
+"Dove",
+"#9E9A9D"
 ],
 [
 "Mist",
-"#B6AFB2"
-],
-[
-"Veil",
-"#C6B3AD"
-],
-[
-"Linen",
-"#D3C8C6"
+"#C3BCBE"
 ],
 [
 "Ivory",
-"#E4DCE4"
+"#F1ECE9"
 ]
 ],
-"v": false
-},
-"craft-to-love": {
-"t": [
-"Craft",
-"to Love"
+"bar": [
+"#F1EDEA",
+"#EFEBE8",
+"#EFEBE8",
+"#F0ECE9",
+"#8E7A70",
+"#8B756E",
+"#9B8C8A",
+"#9B8B89",
+"#848E86",
+"#A49C99",
+"#A39B97",
+"#908581",
+"#918681",
+"#A39E9C",
+"#B0A19D",
+"#B0A09C",
+"#A9A2A9",
+"#AAA4AC",
+"#AAA4AB",
+"#EFEBE8",
+"#EFEBE8",
+"#655E5D",
+"#6C6564",
+"#9F938E",
+"#9F938E",
+"#887261",
+"#877160",
+"#8C7A75",
+"#947E6E",
+"#95806F",
+"#A7958C",
+"#A7958B",
+"#A79C98",
+"#A79D98",
+"#A7A7AD",
+"#A28E82",
+"#A18D81",
+"#7D6F6A",
+"#AC9990",
+"#B19E96",
+"#A7948D",
+"#F0EDE9",
+"#EFEBE8",
+"#F2EEEB",
+"#9F8E87",
+"#B2A59D",
+"#AC9D93",
+"#95877E",
+"#908279",
+"#6F6661",
+"#6D645E",
+"#6D645E",
+"#7B6E65",
+"#7C6F67",
+"#796C63",
+"#8F827D",
+"#D4C9CF",
+"#D3C7CD",
+"#D2C7CD",
+"#D0C4CA",
+"#CFC3CA",
+"#CDC1C8",
+"#CCBFC6",
+"#F1EDEA",
+"#EEEAE7",
+"#EEEAE7",
+"#EEEAE7",
+"#EEEAE7",
+"#EEEAE7",
+"#EEEAE7",
+"#EEEAE7",
+"#5D5C5B"
 ],
-"desc": "A stream ad that travels from the bench to the hand: the setter's loupe and tools, the grading card, and the finished rings worn and held close.",
-"tags": [
-"Black velvet",
-"Loupe and steel",
-"Skin tones",
-"Craft to wear"
+"marks": [
+0.0833,
+0.15,
+0.2167,
+0.3167,
+0.4167,
+0.4833,
+0.6517,
+0.6833,
+0.8167
 ],
-"meta": [
-[
-"Client",
-"Keyzar Jewelry"
-],
-[
-"Concept, edit",
-"Albert Shamaev"
-],
-[
-"Category",
-"Stream ad"
-],
-[
-"Format",
-"43 s · 16:9"
-]
-],
-"labels": [
-"The oval",
-"The loupe",
-"On her hand",
-"The bezel band",
-"The emerald cut"
-],
-"beats": [
-[
-"The ring",
-"Oval on black"
-],
-[
-"The craft",
-"Loupe, tools, setting"
-],
-[
-"The wear",
-"On her hand"
-],
-[
-"The love",
-"Held close"
-]
-],
-"phrase": "craft to love",
-"pal": [
-[
-"Night",
-"#110E0D"
-],
-[
-"Mocha",
-"#5D4F47"
-],
-[
-"Clay",
-"#A57666"
-],
-[
-"Blush",
-"#C0A191"
-],
-[
-"Veil",
-"#D7BCAD"
-],
-[
-"Linen",
-"#EBD6C8"
-]
-],
-"v": false
+"dur": 60.0
 },
 "mia": {
 "t": [
 "Mia",
-"Round Cut"
+"The Round Brilliant"
 ],
-"desc": "A sparkle close-up for social. One round brilliant held between pink nails, turned to show the side stones and the hidden halo, then worn.",
+"cat": "Social ad",
+"vision": "Stop the scroll with pure sparkle: one round brilliant, turned slowly in soft light.",
+"desc": "A social ad built for the first second: the round brilliant face up, the hidden halo in profile, the ring turned between pink nails, a glance from the model, then worn with a band.",
 "tags": [
 "Pink nails",
 "Round brilliant",
-"Side profile",
+"Hidden halo",
 "Soft blush"
 ],
 "meta": [
@@ -863,157 +1736,177 @@ const MB = {
 ],
 [
 "Category",
-"Social close-up"
+"Social ad"
 ],
 [
 "Format",
 "13 s · 9:16"
 ]
 ],
+"phrase": null,
+"v": true,
 "labels": [
+"The stone",
+"The halo",
 "The hold",
-"The face",
-"The profile",
-"The side stones",
-"Worn"
-],
-"beats": [
-[
-"The hold",
-"Between two fingers"
-],
-[
-"The face",
-"Round brilliant"
-],
-[
-"The turn",
-"Hidden halo"
-],
-[
+"The model",
 "Worn",
 "On the hand"
-]
 ],
-"phrase": "round and bright",
-"pal": [
-[
-"Espresso",
-"#513227"
-],
-[
-"Rust",
-"#944842"
-],
-[
-"Terracotta",
-"#9F6A5F"
-],
-[
-"Blush",
-"#C29185"
-],
-[
-"Veil",
-"#D8B5A8"
-],
-[
-"Linen",
-"#EBD2C0"
-]
-],
-"v": true
-},
-"ring-guide": {
-"t": [
-"The Ring",
-"Guide"
-],
-"desc": "“The ring guide you didn't know you needed.” A fast social carousel of shapes and settings, each ring held to camera on a blush background.",
-"tags": [
-"Blush backdrop",
-"Shape by shape",
-"Held to camera",
-"Social hook"
-],
-"meta": [
-[
-"Client",
-"Keyzar Jewelry"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Category",
-"Social"
-],
-[
-"Format",
-"17 s · 9:16"
-]
-],
-"labels": [
-"Emerald",
-"Oval",
-"Twist band",
-"Hidden halo",
-"Radiant"
+"palside": true,
+"times": [
+3.3,
+5.4,
+0.6,
+4.6,
+8.4,
+11.3
 ],
 "beats": [
 [
-"The hook",
-"The guide you didn't know"
+0,
+"The hold",
+"Turned between pink nails"
 ],
 [
-"The shapes",
-"Emerald, oval, radiant"
+2.5,
+"The stone",
+"Round brilliant, face up"
 ],
 [
-"The settings",
-"Twist, halo, pear"
+4.2,
+"The model",
+"Her eye through her fingers"
 ],
 [
-"The end",
-"Keyzar"
+5,
+"The profile",
+"The hidden halo"
+],
+[
+6,
+"Worn",
+"With a band, then in her hair"
 ]
 ],
-"phrase": "you didn't know you needed",
 "pal": [
 [
-"Cognac",
-"#915746"
+"Coffee",
+"#563123"
+],
+[
+"Bronze",
+"#835847"
 ],
 [
 "Clay",
-"#AA8171"
+"#AA7968"
 ],
 [
 "Blush",
-"#BE8471"
-],
-[
-"Sand",
-"#C7A998"
+"#D29681"
 ],
 [
 "Petal",
-"#DBC7B9"
+"#E7BEA5"
 ],
 [
 "Ivory",
-"#F1E3DA"
+"#F3E1CD"
 ]
 ],
-"v": true
+"bar": [
+"#99705C",
+"#9A715D",
+"#9C735F",
+"#9F7662",
+"#A07662",
+"#A27864",
+"#A37A66",
+"#A47B66",
+"#A67D68",
+"#A77E69",
+"#A9806B",
+"#B88F79",
+"#C99E91",
+"#C89C90",
+"#C89B8F",
+"#C89B8F",
+"#C89B8F",
+"#C89B90",
+"#C89B8F",
+"#C89B8F",
+"#C89B8F",
+"#C79B8F",
+"#C79B8F",
+"#90715D",
+"#91725D",
+"#92735E",
+"#93745E",
+"#AE8373",
+"#AF8474",
+"#AF8574",
+"#B08574",
+"#B18675",
+"#B18776",
+"#BB9B8A",
+"#BD9C8C",
+"#BE9E8C",
+"#BF9F8E",
+"#C1A08F",
+"#935F4F",
+"#945F50",
+"#955F50",
+"#955F50",
+"#955F50",
+"#B78972",
+"#B98C74",
+"#BB8E76",
+"#BE9078",
+"#BF9179",
+"#B38E7C",
+"#B38E7B",
+"#B38E7B",
+"#B38E7B",
+"#B38E7B",
+"#B38E7B",
+"#80644D",
+"#80654D",
+"#80654E",
+"#7F654E",
+"#A47861",
+"#A57861",
+"#A67962",
+"#A67963",
+"#A77A63",
+"#E7AB92",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9"
+],
+"marks": [
+0.2463,
+0.403,
+0.0448,
+0.3433,
+0.6269,
+0.8433
+],
+"dur": 13.4
 },
 "natalie": {
 "t": [
 "Natalie",
-"Cushion Cut"
+"Cushion in Window Light"
 ],
-"desc": "A cushion-cut solitaire in warm window light. The ring seen through its profile, then worn with a stacking band across the hand.",
+"cat": "Social ad",
+"vision": "A cushion cut in warm window light, close enough to feel the hand that wears it.",
+"desc": "A social ad in warm daylight: the cushion face on, its profile and hidden halo, the ring on the hand, the model with it at her lips, then worn with a stacking band.",
 "tags": [
 "Window light",
 "Cushion cut",
@@ -1031,77 +1924,181 @@ const MB = {
 ],
 [
 "Category",
-"Social close-up"
+"Social ad"
 ],
 [
 "Format",
 "11 s · 9:16"
 ]
 ],
+"phrase": null,
+"v": true,
 "labels": [
+"The stone",
 "The profile",
+"The model",
 "On the hand",
-"The stack",
-"The light",
-"Worn"
+"Worn",
+"The touch"
+],
+"palside": true,
+"times": [
+0.6,
+1.7,
+3.0,
+4.2,
+5.5,
+8.6
 ],
 "beats": [
 [
-"The profile",
-"Hidden halo"
+0,
+"The hold",
+"Held up to her lips"
 ],
 [
-"The hand",
+1.4,
+"The profile",
+"The hidden halo"
+],
+[
+2.2,
+"The model",
+"Ring at her lips, eyes away"
+],
+[
+3.6,
+"On the hand",
 "Cushion on skin"
 ],
 [
-"The stack",
-"With a band"
-],
-[
-"The light",
-"Warm window"
+5,
+"Worn",
+"With a band, hand to her face"
 ]
 ],
-"phrase": "warm light",
 "pal": [
 [
-"Mocha",
-"#76493A"
+"Ink",
+"#2A170D"
 ],
 [
-"Terracotta",
-"#907965"
+"Coffee",
+"#6C3B28"
+],
+[
+"Bronze",
+"#8A5C46"
 ],
 [
 "Clay",
-"#B87E6B"
+"#AB7A65"
 ],
 [
-"Sand",
-"#C9A293"
+"Peach",
+"#DDB69F"
 ],
 [
-"Veil",
-"#D7B9A8"
-],
-[
-"Petal",
-"#E2CBBA"
+"Ivory",
+"#F0E2D5"
 ]
 ],
-"v": true
+"bar": [
+"#926F5A",
+"#926F5A",
+"#926F5A",
+"#926F5A",
+"#936F5A",
+"#936F5A",
+"#936F5A",
+"#A17C68",
+"#A17C67",
+"#A17C67",
+"#A17C67",
+"#A17C67",
+"#A17D68",
+"#A27D68",
+"#A37E6A",
+"#A47F6A",
+"#A47E6A",
+"#A47E6A",
+"#A47E6A",
+"#A47E69",
+"#A57E6A",
+"#A47E69",
+"#AC857B",
+"#B59276",
+"#E4D1BB",
+"#B68872",
+"#B68873",
+"#B68873",
+"#B68873",
+"#B68973",
+"#B68973",
+"#B68973",
+"#A78D77",
+"#A88D78",
+"#A98F79",
+"#AA907A",
+"#AB917B",
+"#AD927C",
+"#AE937D",
+"#AF947E",
+"#B0957F",
+"#B19580",
+"#B48E77",
+"#B48E77",
+"#B38D76",
+"#B28D76",
+"#B28D76",
+"#B28C75",
+"#B28C75",
+"#B28B74",
+"#B18B74",
+"#B18A73",
+"#C3957A",
+"#C3957A",
+"#C3957A",
+"#C3957A",
+"#C3957B",
+"#C5977F",
+"#C79D81",
+"#DFC09B",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9"
+],
+"marks": [
+0.0547,
+0.1551,
+0.2737,
+0.3832,
+0.5018,
+0.7847
+],
+"dur": 11.0
 },
 "eleanor": {
 "t": [
 "Eleanor",
-"The Proposal"
+"The Yes"
 ],
-"desc": "A proposal in close-ups: the box opens, the oval is lifted out, and the ring settles on her finger against soft grey light.",
+"cat": "Commercial",
+"vision": "The proposal told through hands: the box, the ring, the fit, and the moment she can't hold it in.",
+"desc": "A proposal in close-ups against soft grey light: the box opens, the marquise is lifted out, she slides it on, and both hands rise to her face.",
 "tags": [
 "Soft grey",
 "The box",
-"Oval cut",
+"Marquise cut",
 "Nude nails"
 ],
 "meta": [
@@ -1122,155 +2119,180 @@ const MB = {
 "17 s · 9:16"
 ]
 ],
+"phrase": null,
+"v": true,
 "labels": [
+"The question",
 "The box",
-"The oval",
-"On her finger",
-"The stack",
-"The yes"
+"The marquise",
+"Putting it on",
+"Overwhelmed",
+"Worn"
+],
+"palside": true,
+"times": [
+1.0,
+2.7,
+4.9,
+7.5,
+13.3,
+14.8
 ],
 "beats": [
 [
+0,
+"The question",
+"The box opens, she covers her face"
+],
+[
+2.2,
 "The box",
-"It opens"
+"Opened in close-up"
 ],
 [
-"The ring",
-"Oval in the light"
+3.3,
+"The marquise",
+"Lifted out to the light"
 ],
 [
-"The finger",
-"It fits"
+6.5,
+"The fit",
+"She slides it on"
 ],
 [
+9.8,
+"The hands",
+"Posed in soft grey light"
+],
+[
+13,
 "The yes",
-"Hands to her face"
+"Both hands over her face"
 ]
 ],
-"phrase": "the proposal",
-"pal": [
-[
-"Bronze",
-"#885644"
-],
-[
-"Stone",
-"#978376"
-],
-[
-"Blush",
-"#BD8572"
-],
-[
-"Sand",
-"#B5A297"
-],
-[
-"Veil",
-"#CDC3B5"
-],
-[
-"Ivory",
-"#E4E6DA"
-]
-],
-"v": true
-},
-"three-points": {
-"t": [
-"Three Points",
-"Lehakot"
-],
-"desc": "A music video for Three Points, shot in abandoned concrete rooms washed in blue and violet light, with stairwells, graffiti and a guitarist alone in the dunes.",
-"tags": [
-"Concrete",
-"Electric blue",
-"Violet",
-"Grit"
-],
-"meta": [
-[
-"Artist",
-"Three Points"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Category",
-"Music video"
-],
-[
-"Format",
-"2:16 · 16:9"
-]
-],
-"labels": [
-"The stairwell",
-"Blue room",
-"Violet",
-"The dunes",
-"The walls"
-],
-"beats": [
-[
-"The descent",
-"Down the stairwell"
-],
-[
-"Blue",
-"The band in the dark"
-],
-[
-"Violet",
-"Close and loud"
-],
-[
-"The dunes",
-"One guitar, open sky"
-]
-],
-"phrase": "electric blue",
 "pal": [
 [
 "Ink",
-"#050E1C"
+"#2B190F"
 ],
 [
-"Midnight",
-"#2A1C34"
+"Mocha",
+"#71422A"
 ],
 [
-"Plum",
-"#662558"
+"Terracotta",
+"#9C6A51"
 ],
 [
-"Violet",
-"#5E629F"
+"Blush",
+"#BE8C72"
 ],
 [
-"Sky",
-"#84B6C7"
+"Peach",
+"#E0B195"
 ],
 [
 "Linen",
-"#EADEC6"
+"#DDDED6"
 ]
 ],
-"v": false
+"bar": [
+"#0A0C09",
+"#38342F",
+"#655D54",
+"#948A7E",
+"#BDB1A2",
+"#C0B5A6",
+"#C2B7A8",
+"#C1B5A7",
+"#C1B5A6",
+"#9E978C",
+"#9E978C",
+"#9E988D",
+"#AC9C8C",
+"#AC9B8C",
+"#AB9B8C",
+"#D9AC9C",
+"#F2C5A6",
+"#A49491",
+"#9D928E",
+"#9D928E",
+"#9D918E",
+"#9C918D",
+"#B4ADA9",
+"#B4ADA9",
+"#B4ADA9",
+"#B4ACA9",
+"#B3ACA8",
+"#B3ACA8",
+"#BE9C84",
+"#BE9C84",
+"#BD9A83",
+"#BC9A83",
+"#BB9981",
+"#BB9881",
+"#A37D67",
+"#A27C66",
+"#A27C66",
+"#A37C66",
+"#A47D67",
+"#A47D67",
+"#A47C65",
+"#A67F65",
+"#A67F64",
+"#A67F65",
+"#A67E64",
+"#A57D63",
+"#A67D62",
+"#AC907D",
+"#AD907C",
+"#AD8F7B",
+"#AC8E7A",
+"#AB8D78",
+"#AA8B77",
+"#B0866B",
+"#AC866C",
+"#A78269",
+"#A48168",
+"#A27F67",
+"#A07E67",
+"#B1886A",
+"#B18869",
+"#B18769",
+"#B18768",
+"#B18768",
+"#B08667",
+"#AF8666",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9",
+"#F9FCF9"
+],
+"marks": [
+0.0579,
+0.1562,
+0.2836,
+0.434,
+0.7697,
+0.8565
+],
+"dur": 17.3
 },
 "lb-beauty": {
 "t": [
-"LB",
-"Beauty"
+"LB Beauty",
+"Bath in the Forest"
 ],
-"desc": "A beauty commercial for LB Beauty. A bride in a eucalyptus forest, a milk bath at dusk, and the products set among dried flowers and shells.",
+"cat": "Beauty commercial",
+"vision": "A beauty commercial staged like a film: a milk bath in the middle of a forest.",
+"desc": "We carried a bathtub into the forest, filled it with water and turned it milky white, then lit the woods with portable cinema lights. A full-scale production for a bride, a bath and three products.",
 "tags": [
 "Eucalyptus",
 "Milk bath",
-"Dried flowers",
-"Bridal white"
+"Bridal white",
+"Dried flowers"
 ],
 "meta": [
 [
@@ -1290,646 +2312,546 @@ const MB = {
 "54 s · 16:9"
 ]
 ],
+"phrase": null,
+"v": false,
 "labels": [
 "The forest",
-"The bride",
+"The lace",
 "The bath",
 "The body cream",
-"The perfume"
+"The perfume",
+"The night"
+],
+"palside": true,
+"times": [
+1.69,
+5.08,
+30.6,
+32.9,
+41.9,
+46.5
 ],
 "beats": [
 [
+0,
 "The forest",
-"A bride among trees"
+"A bride among the trees"
 ],
 [
+14,
 "The bath",
-"Milk and flowers"
+"A tub in the woods, milk and flowers"
 ],
 [
+32,
 "The ritual",
 "Body cream on skin"
 ],
 [
+40,
 "The scent",
 "The perfume"
+],
+[
+46,
+"The night",
+"The bride under the lights"
 ]
 ],
-"phrase": "milk and flowers",
 "pal": [
 [
-"Charcoal",
-"#3F3228"
+"Night",
+"#020202"
 ],
 [
-"Olive",
-"#5E5A51"
+"Mocha",
+"#6C4D3E"
 ],
 [
-"Bronze",
-"#7C6355"
+"Moss",
+"#5E6140"
 ],
 [
-"Ash",
-"#8D887E"
+"Taupe",
+"#876554"
 ],
 [
-"Mist",
-"#AEAFAC"
+"Clay",
+"#9B7C67"
 ],
 [
-"Veil",
-"#C8C8C5"
+"Dove",
+"#9F9B9E"
 ]
 ],
-"v": false
-},
-"lidor": {
-"t": [
-"Lidor",
-"Weizman"
+"bar": [
+"#332E20",
+"#564937",
+"#574637",
+"#5B4739",
+"#55453B",
+"#766B6B",
+"#6B5B57",
+"#614F47",
+"#5D4C42",
+"#6D5C48",
+"#666053",
+"#625B51",
+"#61544A",
+"#77655F",
+"#5B514D",
+"#635250",
+"#706B69",
+"#716C6B",
+"#7E7461",
+"#52433F",
+"#737678",
+"#5C5453",
+"#50504E",
+"#565742",
+"#575744",
+"#5A5746",
+"#685E55",
+"#7D7979",
+"#696164",
+"#8A7B7F",
+"#453D3A",
+"#7A726A",
+"#393738",
+"#615B57",
+"#3A3737",
+"#3A3836",
+"#444736",
+"#515440",
+"#69644D",
+"#5B504B",
+"#88837F",
+"#776964",
+"#A99079",
+"#7A6F6B",
+"#736660",
+"#474643",
+"#4D4646",
+"#484544",
+"#4F494C",
+"#443637",
+"#56483F",
+"#675246",
+"#5F4E4A",
+"#6A5F57",
+"#51443F",
+"#615A54",
+"#4E4846",
+"#36312E",
+"#332A26",
+"#453D3A",
+"#010101",
+"#221D1B",
+"#2B2522",
+"#27221F",
+"#26221F",
+"#221E1B",
+"#1D1A18",
+"#1D1B19",
+"#232120",
+"#2E2C2A",
+"#292726",
+"#0B0B0A"
 ],
-"desc": "A music video for Lidor Weizman, built on hard colour light: violet, red and teal pools in a dark room, close on the face and the voice.",
+"marks": [
+0.0311,
+0.0934,
+0.5625,
+0.6048,
+0.7702,
+0.8548
+],
+"dur": 54.4
+},
+"three-points": {
+"t": [
+"Three Points",
+"Lehakot"
+],
+"cat": "Music video",
+"vision": "A song about waiting, and the weight that comes with it.",
+"desc": "“Lehakot” plays on the Hebrew word for waiting. We took the band to the Dead Sea, to an abandoned site called Gallery Minus 430, brought a full lighting kit and shot from morning until nightfall: blue corridors, an amber stairwell and a hooded guitarist alone in the desert.",
 "tags": [
-"Violet",
-"Red room",
-"Teal",
-"Close on the face"
+"Concrete",
+"Electric blue",
+"Amber",
+"Desert"
 ],
 "meta": [
 [
 "Artist",
-"Lidor Weizman"
+"Three Points"
 ],
 [
 "Direction, camera, edit",
 "Albert Shamaev"
 ],
 [
-"Category",
-"Music video"
+"Location",
+"Gallery Minus 430, Dead Sea"
+],
+[
+"Format",
+"2:16 · 16:9"
+]
+],
+"phrase": null,
+"v": false,
+"labels": [
+"The stairwell",
+"The silhouette",
+"The blue room",
+"The weight",
+"The desert",
+"The touch"
+],
+"palside": true,
+"times": [
+117.2,
+44.74,
+47.5,
+74.6,
+83.6,
+96.5
+],
+"beats": [
+[
+0,
+"Walking in",
+"A corridor, 3P on his back"
+],
+[
+24,
+"The stairwell",
+"Seen from above in amber light"
+],
+[
+28,
+"The blue rooms",
+"Verses against the walls"
+],
+[
+70,
+"The weight",
+"A glitch, then head in hands"
+],
+[
+83,
+"The desert",
+"A hooded guitarist"
+],
+[
+110,
+"The release",
+"An embrace, then walking out"
+]
+],
+"pal": [
+[
+"Navy",
+"#132865"
+],
+[
+"Indigo",
+"#23429D"
+],
+[
+"Violet",
+"#5938E5"
+],
+[
+"Electric blue",
+"#3662CE"
+],
+[
+"Lavender",
+"#6182F0"
+],
+[
+"Sea",
+"#59A4ED"
+]
+],
+"bar": [
+"#063B65",
+"#0C4F87",
+"#0A497E",
+"#226596",
+"#1C669C",
+"#1B5F8F",
+"#124571",
+"#1A6095",
+"#105083",
+"#0F4979",
+"#0D487A",
+"#1267A6",
+"#245071",
+"#225274",
+"#8C96A8",
+"#1D528F",
+"#1E5395",
+"#17407E",
+"#2B64B2",
+"#2E67AA",
+"#21559C",
+"#667182",
+"#163B79",
+"#1A3E77",
+"#1D4481",
+"#1F5BA1",
+"#173E70",
+"#112F58",
+"#153D6E",
+"#143970",
+"#271A8A",
+"#204D89",
+"#13478A",
+"#184786",
+"#183B74",
+"#235CAD",
+"#2B68A9",
+"#661C5D",
+"#4E3793",
+"#414CA9",
+"#B9C1E3",
+"#8DB7DA",
+"#727C90",
+"#B7D7EF",
+"#777778",
+"#909091",
+"#808D8B",
+"#396498",
+"#828184",
+"#838E8D",
+"#7C8987",
+"#5A6667",
+"#3B4445",
+"#764622",
+"#764622",
+"#474C91",
+"#4D529A",
+"#607172",
+"#4A5E61",
+"#143B5A",
+"#143B5A",
+"#1E3C53",
+"#263C52",
+"#505DA8",
+"#313A76",
+"#33386E",
+"#363B74",
+"#43498A",
+"#363C74",
+"#31376F",
+"#0D101F",
+"#030303"
+],
+"marks": [
+0.8643,
+0.3299,
+0.3503,
+0.5501,
+0.6165,
+0.7117
+],
+"dur": 135.6
+},
+"lidor": {
+"t": [
+"Lidor",
+"She Doesn't Know"
+],
+"cat": "Music video",
+"vision": "An original concept, “me vs. Lidor”, lit like a film inside a small apartment.",
+"desc": "Shot entirely in my own apartment with professional studio lighting. Hard colour light, rim-lit silhouettes and close faces: the lighting and camera language that defined my style at the time.",
+"tags": [
+"Rim light",
+"Violet",
+"Red room",
+"Close on the face"
+],
+"meta": [
+[
+"Artist",
+"Lidor"
+],
+[
+"Concept, direction, camera, edit",
+"Albert Shamaev"
+],
+[
+"Set",
+"Interior, studio lighting"
 ],
 [
 "Format",
 "2:31 · 16:9"
 ]
 ],
+"phrase": null,
+"v": false,
 "labels": [
+"The outline",
 "Violet",
 "The voice",
-"Teal",
-"Red",
-"White"
+"Smoke",
+"The cat",
+"The clock"
+],
+"palside": true,
+"times": [
+7.5,
+22.5,
+37.6,
+51.0,
+123.5,
+128.0
 ],
 "beats": [
 [
-"Violet",
-"The opening"
+0,
+"The outline",
+"A silhouette in rim light"
 ],
 [
-"The voice",
+12,
+"Violet",
 "Close on the face"
 ],
 [
-"Red",
-"The turn"
+29,
+"The cat",
+"It walks past him"
 ],
 [
-"White",
-"The release"
+37,
+"The voice",
+"Lavender light, eyes closed"
+],
+[
+50,
+"Smoke",
+"Rim light through smoke"
+],
+[
+117,
+"The shadow",
+"A cat-eared shadow, then the clock"
 ]
 ],
-"phrase": "colour as mood",
 "pal": [
 [
 "Night",
-"#020203"
+"#060306"
 ],
 [
-"Ink",
-"#080A09"
-],
-[
-"Midnight",
-"#18032A"
-],
-[
-"Charcoal",
-"#3C0B26"
+"Indigo",
+"#451BCA"
 ],
 [
 "Espresso",
-"#552F2F"
+"#4A453E"
 ],
-[
-"Smoke",
-"#777189"
-]
-],
-"v": false
-},
-"tomorrow": {
-"t": [
-"Tomorrow",
-"Music Video"
-],
-"desc": "A music video shot over one bright day: a classic convertible, an orchard, a white sheet on the sand and a pink dress at the waterline.",
-"tags": [
-"Pink",
-"Sea wind",
-"Orchard",
-"Classic car"
-],
-"meta": [
-[
-"Category",
-"Music video"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Format",
-"3:56 · 16:9"
-],
-[
-"Light",
-"Natural daylight"
-]
-],
-"labels": [
-"The car",
-"The dance",
-"The sheet",
-"The shore",
-"The wind"
-],
-"beats": [
-[
-"The road",
-"A classic convertible"
-],
-[
-"The orchard",
-"Running through trees"
-],
-[
-"The sand",
-"A white sheet"
-],
-[
-"The sea",
-"Pink dress, wind"
-]
-],
-"phrase": "tomorrow",
-"pal": [
-[
-"Ink",
-"#2E2524"
-],
-[
-"Smoke",
-"#69616D"
-],
-[
-"Terracotta",
-"#88707A"
-],
-[
-"Sky",
-"#99A5BC"
-],
-[
-"Mist",
-"#BBCBD9"
-],
-[
-"Ivory",
-"#E5EAEE"
-]
-],
-"v": false
-},
-"two-am": {
-"t": [
-"2 AM",
-"Workspace"
-],
-"desc": "A personal travel film made from small moments in an old city: copper and frames at a market, a street musician, a man resting on a bench and bronze statues in the sun.",
-"tags": [
-"Teal sky",
-"Market brass",
-"Street life",
-"Bronze"
-],
-"meta": [
-[
-"Client",
-"Personal"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Category",
-"Travel film"
-],
-[
-"Format",
-"30 s · 16:9"
-]
-],
-"labels": [
-"Red",
-"The old town",
-"The bench",
-"The crowd",
-"The statue"
-],
-"beats": [
-[
-"Arrival",
-"Colour first"
-],
-[
-"The market",
-"Brass and frames"
-],
-[
-"The street",
-"Music and rest"
-],
-[
-"The statues",
-"Bronze in the sun"
-]
-],
-"phrase": "two in the morning",
-"pal": [
-[
-"Ink",
-"#212724"
-],
-[
-"Espresso",
-"#4E4840"
-],
-[
-"Mocha",
-"#74524F"
-],
-[
-"Smoke",
-"#818171"
-],
-[
-"Veil",
-"#BFBDAB"
-],
-[
-"Snow",
-"#F9FBF3"
-]
-],
-"v": false
-},
-"bulgaryo": {
-"t": [
-"Bulgaryo",
-"Spring Suit"
-],
-"desc": "A menswear reel for Bulgaryo. A green suit walked down sunlit stone steps, then close on the lapel, the shirt and the jaw line.",
-"tags": [
-"Bottle green",
-"Stone steps",
-"Tailoring",
-"Warm sun"
-],
-"meta": [
-[
-"Client",
-"Bulgaryo"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Category",
-"Menswear reel"
-],
-[
-"Format",
-"18 s · 9:16"
-]
-],
-"labels": [
-"The steps",
-"The walk",
-"The stance",
-"The lapel",
-"The detail"
-],
-"beats": [
-[
-"The steps",
-"Top of the stairs"
-],
-[
-"The walk",
-"Down into the light"
-],
-[
-"The cut",
-"Lapel and shirt"
-],
-[
-"The end",
-"Bulgaryo"
-]
-],
-"phrase": "spring suit",
-"pal": [
-[
-"Night",
-"#0A0703"
-],
-[
-"Ink",
-"#200B02"
-],
-[
-"Charcoal",
-"#322116"
-],
-[
-"Olive",
-"#6C5F4F"
-],
-[
-"Blush",
-"#AE937D"
-],
-[
-"Linen",
-"#E5DCCE"
-]
-],
-"v": true
-},
-"retro": {
-"t": [
-"Retro",
-"Fashion Reel"
-],
-"desc": "A fashion reel with a seventies palette: white sunglasses, check shirts, fishnets and denim, cut fast between courtyards, doorways and garden walls.",
-"tags": [
-"Seventies",
-"Check and denim",
-"Courtyard",
-"Film colour"
-],
-"meta": [
-[
-"Category",
-"Fashion reel"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Format",
-"52 s · 2:3"
-],
-[
-"Look",
-"Warm film colour"
-]
-],
-"labels": [
-"Fishnets",
-"The courtyard",
-"The doorway",
-"The garden",
-"The shades"
-],
-"beats": [
-[
-"The look",
-"Seventies styling"
-],
-[
-"The walk",
-"Courtyard light"
-],
-[
-"The pause",
-"In the doorway"
-],
-[
-"The cut",
-"Fast and playful"
-]
-],
-"phrase": "seventies",
-"pal": [
-[
-"Charcoal",
-"#402C1F"
-],
-[
-"Olive",
-"#796D56"
-],
-[
-"Ash",
-"#85978B"
-],
-[
-"Stone",
-"#A9A589"
-],
-[
-"Mist",
-"#C3D2C1"
-],
-[
-"Snow",
-"#F5F6F0"
-]
-],
-"v": true
-},
-"look-14": {
-"t": [
-"Streetwear",
-"Lookbook"
-],
-"desc": "A streetwear lookbook shot against urban texture: rusted containers, blue glass and striped shutters, with oversized hoodies in mint, black and white.",
-"tags": [
-"Shipping containers",
-"Mint",
-"Striped shutters",
-"Oversized"
-],
-"meta": [
-[
-"Category",
-"Lookbook"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Format",
-"52 s · 9:16"
-],
-[
-"Location",
-"Urban texture"
-]
-],
-"labels": [
-"Mint",
-"The container",
-"Blue glass",
-"The shutter",
-"The step"
-],
-"beats": [
-[
-"Mint",
-"Against the wall"
-],
-[
-"Black",
-"Containers"
-],
-[
-"Glass",
-"Back to camera"
-],
-[
-"White",
-"Striped shutters"
-]
-],
-"phrase": "street texture",
-"pal": [
-[
-"Ink",
-"#242221"
-],
-[
-"Olive",
-"#6F6C5B"
-],
-[
-"Ash",
-"#77938D"
-],
-[
-"Stone",
-"#9D947E"
-],
-[
-"Mist",
-"#99B3A9"
-],
-[
-"Veil",
-"#CCCCC1"
-]
-],
-"v": true
-},
-"red-suit": {
-"t": [
-"Red",
-"Suit"
-],
-"desc": "A quick fashion reel: a red double-breasted suit walking out of a black gate onto a sunny street, with a gift bag in hand and a smile to camera.",
-"tags": [
-"Lipstick red",
-"Black gate",
-"Street sun",
-"Playful"
-],
-"meta": [
-[
-"Category",
-"Fashion reel"
-],
-[
-"Direction, camera, edit",
-"Albert Shamaev"
-],
-[
-"Format",
-"11 s · 9:16"
-],
-[
-"Look",
-"Bright daylight"
-]
-],
-"labels": [
-"The gate",
-"The detail",
-"The street",
-"The gift",
-"The smile"
-],
-"beats": [
-[
-"The gate",
-"She steps out"
-],
-[
-"The suit",
-"Red on the street"
-],
-[
-"The gift",
-"Bag in hand"
-],
-[
-"The smile",
-"To camera"
-]
-],
-"phrase": "lipstick red",
-"pal": [
 [
 "Wine",
-"#831327"
+"#7B295A"
 ],
 [
-"Smoke",
-"#7B6464"
+"Red",
+"#CD1F14"
 ],
 [
-"Stone",
-"#A59998"
-],
-[
-"Veil",
-"#CAB8B4"
-],
-[
-"Ivory",
-"#E4E0DC"
-],
-[
-"Snow",
-"#F6FCFC"
+"Steel",
+"#6B5E7E"
 ]
 ],
-"v": true
+"bar": [
+"#000000",
+"#000000",
+"#000000",
+"#010000",
+"#010000",
+"#240836",
+"#260946",
+"#1F0B5A",
+"#08070A",
+"#131118",
+"#160629",
+"#32075E",
+"#3E165D",
+"#17191D",
+"#0B0323",
+"#0B0A0F",
+"#02081E",
+"#99935A",
+"#40364C",
+"#15121A",
+"#010D15",
+"#140602",
+"#4B4058",
+"#A0140C",
+"#000001",
+"#000001",
+"#000101",
+"#483B54",
+"#050833",
+"#370F09",
+"#403A31",
+"#070A05",
+"#1F0631",
+"#0F0318",
+"#000000",
+"#000000",
+"#030302",
+"#25231C",
+"#23211A",
+"#1D1C17",
+"#191C17",
+"#000000",
+"#100D13",
+"#0F0C12",
+"#160421",
+"#07070A",
+"#1B1824",
+"#0C1619",
+"#0B090E",
+"#101315",
+"#0E100F",
+"#615771",
+"#665B78",
+"#201136",
+"#241F23",
+"#323036",
+"#656466",
+"#807F82",
+"#88868A",
+"#8A868C",
+"#060606",
+"#910806",
+"#6A2C33",
+"#711333",
+"#670C1E",
+"#520810",
+"#3C1533",
+"#431626",
+"#16080E",
+"#2D1022",
+"#B2B3B0",
+"#000000"
+],
+"marks": [
+0.0498,
+0.1494,
+0.2497,
+0.3387,
+0.8202,
+0.85
+],
+"dur": 150.6
 }
 };
